@@ -2,10 +2,11 @@ import './App.css';
 import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 
+//? Components
 import AppForm from './components/AppForm'
 import ApplicationItems from './components/ApplicationItems'
 
-
+//? Initial Form Values Object
 const initialFormValues = {
   companyName: '',
   companyPhone: '',
@@ -24,10 +25,14 @@ const initialFormValues = {
 }
 
 function App() {
+  //? State
+
   const [formValues, setFormValues] = useState(initialFormValues);
   const [application,setApplication] = useState([]);
 
+  //? --End State -- //
 
+//? Form Controllers
   const updateValues = (inputName, inputValue) => {
     setFormValues({
       ...formValues,
@@ -60,6 +65,7 @@ function App() {
     setFormValues(initialFormValues);
     console.log(application);
   }
+//? --End Form Controllers -- //
 
 
 

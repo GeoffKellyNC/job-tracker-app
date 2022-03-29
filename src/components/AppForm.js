@@ -70,50 +70,50 @@ const handleChange = (e) => {
                     value = {values.salaryInfo}
                     onChange = {handleChange}
                 />
-                <label className = 'col-3'>Contacted</label>
-                <select className = 'col-4' name = 'contactQues' value = {values.contactQues} onChange = {handleChange}>
+                <label className = 'col-3 row-1'>Contacted</label>
+                <select className = 'col-4 row-1' name = 'contactQues' value = {values.contactQues} onChange = {handleChange}>
                     <option value = ''>--Select Option--</option>
                     <option value = 'Yes'>Yes</option>
                     <option value = 'No'>No</option>
                 </select>
-                <label className = 'col-3'>Contact Name</label>
+                <label className = 'col-3 row-2'>Contact Name</label>
                 <input
                     name = 'contactName'
                     type = 'text'
                     placeholder = 'Contact Name'
                     value = {values.contactName}
                     onChange = {handleChange}
-                    className = 'col-4'
+                    className = 'col-4 row-2'
                 />
-                <label className = 'col-3' >Contact Phone</label>
+                <label className = 'col-3 row-3' >Contact Phone</label>
                 <input
                     name = 'contactPhone'
                     type = 'tel'
                     placeholder = 'Contact Phone Number'
                     value = {values.contactPhone}
                     onChange = {handleChange}
-                    className = 'col-4'
+                    className = 'col-4 row-3'
                 />
-                <label className = 'col-3'>Contact Email</label>
+                <label className = 'col-3 row-4'>Contact Email</label>
                 <input
                     name = 'contactEmail'
                     type = 'email'
                     placeholder = 'Contact Email'
                     value = {values.contactEmail}
                     onChange = {handleChange}
-                    className = 'col-4'
+                    className = 'col-4 row-4'
                 />
-                <label className = 'col-3'>Contact Position</label>
+                <label className = 'col-3 row-5'>Contact Position</label>
                 <input
                     name = 'contactPosition'
                     type = 'text'
                     placeholder = 'Contact Position'
                     value = {values.contactPosition}
                     onChange = {handleChange}
-                    className = 'col-4'
+                    className = 'col-4 row-5'
                 />
-                <label className = 'col-3'>Current Status</label>
-                <select className = 'col-4' name = 'currentStatus' value = {values.currentStatus} onChange = {handleChange}>
+                <label className = 'col-3 row-6'>Current Status</label>
+                <select className = 'col-4 row-6' name = 'currentStatus' value = {values.currentStatus} onChange = {handleChange}>
                     <option value = 'applies'>Applied</option>
                     <option value = 'interviewSet'>Interview Phase</option>
                     <option value = 'offer'>Offer</option>
