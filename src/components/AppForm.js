@@ -14,7 +14,6 @@ const handleChange = (e) => {
   return (
     <div className = 'form-container'>
         <form onSubmit={submit}>
-            <div className = 'form-inputs'>
                 <label>Company Name</label>
                 <input
                     name = 'companyName'
@@ -71,46 +70,50 @@ const handleChange = (e) => {
                     value = {values.salaryInfo}
                     onChange = {handleChange}
                 />
-                <label>Contacted</label>
-                <select name = 'contactQues' value = {values.contactQues} onChange = {handleChange}>
+                <label className = 'col-3'>Contacted</label>
+                <select className = 'col-4' name = 'contactQues' value = {values.contactQues} onChange = {handleChange}>
                     <option value = ''>--Select Option--</option>
                     <option value = 'Yes'>Yes</option>
                     <option value = 'No'>No</option>
                 </select>
-                <label>Contact Name</label>
+                <label className = 'col-3'>Contact Name</label>
                 <input
                     name = 'contactName'
                     type = 'text'
                     placeholder = 'Contact Name'
                     value = {values.contactName}
                     onChange = {handleChange}
+                    className = 'col-4'
                 />
-                <label>Contact Phone</label>
+                <label className = 'col-3' >Contact Phone</label>
                 <input
                     name = 'contactPhone'
                     type = 'tel'
                     placeholder = 'Contact Phone Number'
                     value = {values.contactPhone}
                     onChange = {handleChange}
+                    className = 'col-4'
                 />
-                <label>Contact Email</label>
+                <label className = 'col-3'>Contact Email</label>
                 <input
                     name = 'contactEmail'
                     type = 'email'
                     placeholder = 'Contact Email'
                     value = {values.contactEmail}
                     onChange = {handleChange}
+                    className = 'col-4'
                 />
-                <label>Contact Position</label>
+                <label className = 'col-3'>Contact Position</label>
                 <input
                     name = 'contactPosition'
                     type = 'text'
                     placeholder = 'Contact Position'
                     value = {values.contactPosition}
                     onChange = {handleChange}
+                    className = 'col-4'
                 />
-                <label>Current Status</label>
-                <select name = 'currentStatus' value = {values.currentStatus} onChange = {handleChange}>
+                <label className = 'col-3'>Current Status</label>
+                <select className = 'col-4' name = 'currentStatus' value = {values.currentStatus} onChange = {handleChange}>
                     <option value = 'applies'>Applied</option>
                     <option value = 'interviewSet'>Interview Phase</option>
                     <option value = 'offer'>Offer</option>
@@ -118,16 +121,16 @@ const handleChange = (e) => {
                     <option value = 'contacted'>Contacted</option>
                     <option value = 'other'>Other</option>
                 </select>
-                <label>Other Notes:</label>
+                <label className = 'col-3'>Other Notes:</label>
                 <textarea
                     name = 'otherNotes'
                     type = 'text'
                     placeholder = 'Other Notes'
                     value = {values.otherNotes}
-                    onChange = {handleChange} >
+                    onChange = {handleChange} 
+                    className = 'col-4'>
                 </textarea>
                 <button type = 'submit'>Submit</button>
-            </div>
         </form>
     </div>
   )

@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;700;800&display=swap');
 
+form{
+    display: grid;
+    grid-template-columns: 12em 1fr 1fr 1fr;
+}
+
+
 input, textarea, select{
     width: 50%;
     margin: auto;
@@ -9,6 +15,7 @@ input, textarea, select{
     padding: 0 1em;
     font-size: 1rem;
     margin-bottom: 1em;
+    grid-column: 2/3;
 }
 
 input::placeholder, textarea::placeholder{
@@ -20,9 +27,20 @@ label{
     display: block;
     font-size: 1.2rem;
     margin-bottom: 5px;
-    font-family: 'Poppins'
+    font-family: 'Poppins', sans-serif;
+    grid-column: 1/2;
 }
 
-.form-container{
+button{
+    grid-column: 2/3;
+    width: 20%;
     
+}
+
+.col-3{
+    grid-column: 3/4;
+}
+
+.col-4{
+    grid-column: 4/5;
 }
