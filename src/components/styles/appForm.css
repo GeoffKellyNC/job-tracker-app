@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;700;800&display=swap');
+
+input, textarea, select{
+    width: 50%;
+    margin: auto;
+    height: 3em;
+    border-radius: 5px;
+    border: 1px solid rgb(221, 41, 41);
+    padding: 0 1em;
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+
+input::placeholder, textarea::placeholder{
+    color: rgb(50, 60, 66);
+    font-family: 'Poppins', sans-serif;
+}
+
+label{
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-family: 'Poppins'
+}
+
+.form-container{
+    
+}

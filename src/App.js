@@ -1,17 +1,79 @@
 import './App.css';
 import React, { useState } from 'react';
+import { v4 as uuid } from 'uuid';
+
+import AppForm from './components/AppForm'
+import ApplicationItems from './components/ApplicationItems'
 
 
 const initialFormValues = {
-
+  companyName: '',
+  companyPhone: '',
+  companyWeb: '',
+  jobTitle: '',
+  dateApplied: '',
+  jobDiscovery: '',
+  salaryInfo: '',
+  contactQues: '',
+  contactName: '',
+  contactPhone: '',
+  contactEmail: '',
+  contactPosition: '',
+  currentStatus: '',
+  otherNotes: '',
 }
 
 function App() {
+  const [formValues, setFormValues] = useState(initialFormValues);
+  const [application,setApplication] = useState([]);
+
+
+  const updateValues = (inputName, inputValue) => {
+    setFormValues({
+      ...formValues,
+      [inputName]: inputValue
+    })
+  }
+
+  const handelSubmit = (e) => {
+    e.preventDefault();
+    const newApplication = {
+      id: uuid(),
+      companyName: formValues.companyName,
+      companyPhone: formValues.companyPhone,
+      companyWeb: formValues.companyWeb,
+      jobTitle: formValues.jobTitle,
+      dateApplied: formValues.dateApplied,
+      jobDiscovery: formValues.jobDiscovery,
+      salaryInfo: formValues.salaryInfo,
+      contactQues: formValues.contactQues,
+      contactName: formValues.contactName,
+      contactPhone: formValues.contactPhone,
+      contactEmail: formValues.contactEmail,
+      contactPosition: formValues.contactPosition,
+      currentStatus: formValues.currentStatus,
+      otherNotes: formValues.otherNotes,
+    }
+
+
+    setApplication([...application, newApplication]);
+    setFormValues(initialFormValues);
+    console.log(application);
+  }
+
+
+
+
+
   return (
     <div className="App">
       <header>
         <h1> Job Tracker </h1>
       </header>
+      <AppForm values = {formValues} update = {updateValues} submit = {handelSubmit}/>
+      {
+        application && <ApplicationItems application = {application} />
+      }
 
     </div>
   );
