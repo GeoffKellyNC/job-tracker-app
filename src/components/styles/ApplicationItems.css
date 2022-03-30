@@ -49,3 +49,11 @@ a{
     display: flex;
 }
 
+.btn-container button {
+    font-family: 'Poppins', sans-serif;
+    margin: 0.2em;
+    padding: 1em;
+    border: none;
+    background-color: #FB8500;
+    color: white;
+}

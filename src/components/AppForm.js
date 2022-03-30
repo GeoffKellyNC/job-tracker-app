@@ -1,10 +1,12 @@
 import React from 'react'
 
-import {Link} from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 import './styles/appForm.css'
 
 function AppForm({ values, update, submit }) {
+
+const history = useHistory();
 
 const handleChange = (e) => {
     const name = e.target.name;
@@ -15,7 +17,6 @@ const handleChange = (e) => {
 
   return (
     <div className = 'form-container'>
-        <Link to = '/'>Go Back to Home</Link>
         <form onSubmit={submit}>
                 <label>Company Name</label>
                 <input
@@ -135,6 +136,7 @@ const handleChange = (e) => {
                     className = 'col-4'>
                 </textarea>
                 <button type = 'submit'>Submit</button>
+                <button class = 'back-btn' onClick = {() => {history.push('/')}}>Back To List</button>
         </form>
     </div>
   )

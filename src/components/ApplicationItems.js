@@ -27,9 +27,9 @@ function ApplicationItems({ application, deleteApp}) {
                             <p>{app.currentStatus}</p>
                         </h3>
                         <div className = 'btn-container'>
-                            <button onClick = {() => {history.push(`/${app.id}`)}}>Info</button>
-                            <button onClick = {() => deleteApp(app.id)} >Delete</button>
-                            <button onClick = {() => {}} >Edit</button>
+                            <button className = 'info-btn' onClick = {() => {history.push(`/${app.id}`)}}>Info</button>
+                            <button className = 'del-btn' onClick = {() => deleteApp(app.id)} >Delete</button>
+                            <button className = 'edit-btn' onClick = {() => {}} >Edit</button>
                         </div>
                     </div>
                     )

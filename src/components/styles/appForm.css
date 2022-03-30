@@ -4,6 +4,7 @@ form{
     display: grid;
     grid-template-columns: 12em 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 2em;
 }
 
 
@@ -44,6 +45,16 @@ form button{
     background-color: #FB8500;
     color: white;
     
+}
+
+.back-btn{
+    /* grid-column: 1/2; */
+    font-family: 'Poppins', sans-serif;
+    margin: 0.2em;
+    padding: 1em;
+    border: none;
+    background-color: #FB8500;
+    color: white;
 }
 
 .col-3{
