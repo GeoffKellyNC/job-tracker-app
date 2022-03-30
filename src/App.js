@@ -7,6 +7,7 @@ import { Route, Switch, useHistory } from 'react-router-dom';
 import Home from './components/Home';
 import AppForm from './components/AppForm'
 import AppDetails from './components/AppDetails'
+import EditForm  from './components/EditForm';
 
 //? Initial Form Values Object
 const initialFormValues = {
@@ -40,7 +41,7 @@ const demoApplication = {
   contactPhone: '123-456-7890',
   contactEmail: 'johndoe@email.com',
   contactPosition: 'Manager',
-  currentStatus: 'Interview',
+  currentStatus: 'Interview Phase',
   otherNotes: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
 }
 
@@ -97,6 +98,18 @@ function App() {
     setApplication(newAppList);
     setAppCount(appCount - 1);
   }
+    //! --Edit Form Function --//
+    const updateEdit = (id, inputName, inputValue) => {
+      const newApplication = application.map(app => {
+        if(app.id === id){
+          return {...app,[inputName]: inputValue}
+        } else {
+          return app;
+        }
+      })
+      setApplication(newApplication);
+    }
+    //! --End Edit Form Function --//
 
   
 //? --End Form Controllers -- //
@@ -111,6 +124,9 @@ function App() {
         <h1> Job Tracker </h1>
       </header>
       <Switch >
+        <Route path = {`/edit/:appID`}>
+          <EditForm details = {application} updateEdit = {updateEdit}  />
+        </Route>
         <Route  path = "/form" >
           <AppForm values = {formValues} update = {updateValues} submit = {handelSubmit}/>
         </Route>
@@ -121,8 +137,6 @@ function App() {
           <Home application = {application} appCount = {appCount} deleteApp = {deleteApp} />
         </Route>
       </Switch>
-    
-
     </div>
   );
 }

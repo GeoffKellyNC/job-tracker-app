@@ -29,7 +29,7 @@ function ApplicationItems({ application, deleteApp}) {
                         <div className = 'btn-container'>
                             <button className = 'info-btn' onClick = {() => {history.push(`/${app.id}`)}}>Info</button>
                             <button className = 'del-btn' onClick = {() => deleteApp(app.id)} >Delete</button>
-                            <button className = 'edit-btn' onClick = {() => {}} >Edit</button>
+                            <button className = 'edit-btn' onClick = {() => {history.push(`/edit/${app.id}`)}} >Edit</button>
                         </div>
                     </div>
                     )
