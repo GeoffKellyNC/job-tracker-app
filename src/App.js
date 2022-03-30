@@ -1,12 +1,11 @@
 import './App.css';
 import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, useHistory } from 'react-router-dom';
 
 //? Components
 import Home from './components/Home';
 import AppForm from './components/AppForm'
-import ApplicationItems from './components/ApplicationItems'
 import AppDetails from './components/AppDetails'
 
 //? Initial Form Values Object
@@ -33,7 +32,7 @@ const demoApplication = {
   companyPhone: '123-456-7890',
   companyWeb: 'www.google.com',
   jobTitle: 'Software Engineer',
-  dateApplied: '01/01/2020',
+  dateApplied: '2022-03-01',
   jobDiscovery: 'Google',
   salaryInfo: '$100,000',
   contactQues: 'Yes',
@@ -50,8 +49,13 @@ function App() {
 
   const [formValues, setFormValues] = useState(initialFormValues);
   const [application,setApplication] = useState([demoApplication]);
-
+  const [appCount, setAppCount] = useState(application.length);
   //? --End State -- //
+
+  //? History
+  const history = useHistory();
+
+  //? --End History -- //
 
 //? Form Controllers
   const updateValues = (inputName, inputValue) => {
@@ -84,8 +88,17 @@ function App() {
 
     setApplication([...application, newApplication]);
     setFormValues(initialFormValues);
-    // console.log(application);
+    setAppCount(appCount + 1);
+    history.push('/');
   }
+
+  const deleteApp = (id) => {
+    const newAppList = application.filter(app => app.id !== id);
+    setApplication(newAppList);
+    setAppCount(appCount - 1);
+  }
+
+  
 //? --End Form Controllers -- //
 
 
@@ -105,7 +118,7 @@ function App() {
           <AppDetails details = {application} />
         </Route>
         <Route exact path = "/">
-          <Home application = {application} />
+          <Home application = {application} appCount = {appCount} deleteApp = {deleteApp} />
         </Route>
       </Switch>
     

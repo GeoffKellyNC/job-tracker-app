@@ -5,27 +5,31 @@ function AppDetails({ details }) {
     // console.log(details)
 const { appID } = useParams();
 
-const app = details.find(app => app.id === appID);
+const item = details.find(app => app.id === appID);
 
 
     return (
         <div>
-            <div key={app.id}>
-                <p>App ID: {app.id}</p>
-                <h2>{app.companyName}</h2>
+            <div key={item.id}>
+                <p>App ID: {item.id}</p>
+                <h2>{item.companyName}</h2>
                 <h3>Position:
-                    <p>{app.jobTitle}</p>
+                    <p>{item.jobTitle}</p>
                 </h3>
                 <h3>Date Applied:
-                    <p>{app.dateApplied}</p>
+                    <p>{item.dateApplied}</p>
+                </h3>
+                <h3>
+                    {item.companyName} Phone:
+                    <p>{item.companyPhone}</p>
                 </h3>
                 <h3> Contacted:
-                    <p>{app.contactQues}</p>
+                    <p>{item.contactQues}</p>
                 </h3>
                 <h3>Status:
-                    <p>{app.currentStatus}</p>
+                    <p>{item.currentStatus}</p>
                 </h3>
-                <p>{app.otherNotes}</p>
+                <p>{item.otherNotes}</p>
                 <Link to = '/'>Go Home</Link>
             </div>     
         </div>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;700;800&display=swap');
+
 
 form{
     display: grid;
@@ -12,7 +12,7 @@ input, textarea, select{
     margin: auto;
     height: 3em;
     border-radius: 5px;
-    border: 1px solid rgb(221, 41, 41);
+    border: 1px solid #219EBC;
     padding: 0 1em;
     font-size: 1rem;
     margin-bottom: 1em;
@@ -29,12 +29,20 @@ label{
     font-size: 1.2rem;
     margin-bottom: 5px;
     font-family: 'Poppins', sans-serif;
+    color: white;
     grid-column: 1/2;
 }
 
-button{
+form button{
     grid-column: 2/3;
     width: 20%;
+    font-family: 'Poppins', sans-serif;
+    margin: 3em;
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #FB8500;
+    color: white;
     
 }
 

@@ -1,0 +1,25 @@
+body{
+    background-color: #023047;
+
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1em;
+    font-size: 3em;
+}
+
+header{
+    background-color: #FFB703;
+}
+
+.home-container h2{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 1em;
+    font-size: 2em;
+}

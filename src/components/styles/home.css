@@ -1,0 +1,30 @@
+
+
+
+h2{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+ .top-text button{
+    font-family: 'Poppins', sans-serif;
+    margin: 3em;
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #FB8500;
+    color: white;
+}
+
+
+
+.home-container{
+    max-width: 100%;
+}
+
+.top-text{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+

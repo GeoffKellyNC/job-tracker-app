@@ -1,39 +1,28 @@
 import React from 'react'
-import { Link, useRouteMatch, useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
-function Home({ application }) {
-    
+import ApplicationItems from './ApplicationItems'
+
+
+import './styles/home.css'
+
+function Home({ application, appCount, deleteApp }) {
+
     const history = useHistory();
 
+
+    
+    const addNewButton = () => {
+        history.push('/form')
+    }
+
     return (
-        <div>
-            <div>
-                <h2>Below are Your Current Applications:</h2>
-                <Link to={'/form'}>Add New Application</Link>
+        <div className = 'home-container'>
+            <div className = 'top-text'>
+                <h2>Current Application Count: {appCount}</h2>
+                <button onClick = {addNewButton}>Add Application</button>
             </div>
-            <div>
-                {application.map(app => {
-                    return (
-                        <div key={app.id}>
-                            <Link to={`/${app.id}`}>{app.companyName}</Link>
-                            <h3>Position:
-                                <p>{app.jobTitle}</p>
-                            </h3>
-                            <h3>Date Applied:
-                                <p>{app.dateApplied}</p>
-                            </h3>
-                            <h3> Contacted:
-                                <p>{app.contactQues}</p>
-                            </h3>
-                            <h3>Status:
-                                <p>{app.currentStatus}</p>
-                            </h3>
-                            <Link to = {`/${app.id}`}>View Application Details</Link>
-                        </div>
-                    )
-                })
-                }
-            </div>
+            <ApplicationItems application = {application} deleteApp = {deleteApp} />
         </div>
     )
 }

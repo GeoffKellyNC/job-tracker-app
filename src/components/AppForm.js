@@ -117,6 +117,7 @@ const handleChange = (e) => {
                 />
                 <label className = 'col-3 row-6'>Current Status</label>
                 <select className = 'col-4 row-6' name = 'currentStatus' value = {values.currentStatus} onChange = {handleChange}>
+                    <option value = ''>--Select Option--</option>
                     <option value = 'applied'>Applied</option>
                     <option value = 'interviewSet'>Interview Phase</option>
                     <option value = 'offer'>Offer</option>
