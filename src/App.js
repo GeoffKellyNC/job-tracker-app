@@ -84,7 +84,7 @@ function App() {
 
     setApplication([...application, newApplication]);
     setFormValues(initialFormValues);
-    console.log(application);
+    // console.log(application);
   }
 //? --End Form Controllers -- //
 
