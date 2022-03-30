@@ -1,5 +1,7 @@
 import React from 'react'
 
+import {Link} from 'react-router-dom'
+
 import './styles/appForm.css'
 
 function AppForm({ values, update, submit }) {
@@ -13,6 +15,7 @@ const handleChange = (e) => {
 
   return (
     <div className = 'form-container'>
+        <Link to = '/'>Go Back to Home</Link>
         <form onSubmit={submit}>
                 <label>Company Name</label>
                 <input
@@ -114,7 +117,7 @@ const handleChange = (e) => {
                 />
                 <label className = 'col-3 row-6'>Current Status</label>
                 <select className = 'col-4 row-6' name = 'currentStatus' value = {values.currentStatus} onChange = {handleChange}>
-                    <option value = 'applies'>Applied</option>
+                    <option value = 'applied'>Applied</option>
                     <option value = 'interviewSet'>Interview Phase</option>
                     <option value = 'offer'>Offer</option>
                     <option value = 'rejected'>Rejected</option>
