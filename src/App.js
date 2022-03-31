@@ -99,23 +99,20 @@ function App() {
     setAppCount(appCount - 1);
   }
     //! --Edit Form Function --//
-    const updateEdit = (id, inputName, inputValue) => {
-      const newApplication = application.map(app => {
-        if(app.id === id){
-          return {...app,[inputName]: inputValue}
-        } else {
-          return app;
+    const updateEdit = (e, editApp) => {
+      e.preventDefault();
+      setApplication(application.map(app => {
+        if (app.id === editApp.id){
+          return editApp
         }
-      })
-      setApplication(newApplication);
+        return app
+      }))
+      history.push('/')
     }
     //! --End Edit Form Function --//
 
   
 //? --End Form Controllers -- //
-
-
-
 
 
   return (
@@ -125,7 +122,7 @@ function App() {
       </header>
       <Switch >
         <Route path = {`/edit/:appID`}>
-          <EditForm details = {application} updateEdit = {updateEdit}  />
+          <EditForm details = {application}  updateEdit = {updateEdit}  />
         </Route>
         <Route  path = "/form" >
           <AppForm values = {formValues} update = {updateValues} submit = {handelSubmit}/>
