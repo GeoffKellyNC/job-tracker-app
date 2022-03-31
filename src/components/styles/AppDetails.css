@@ -1,0 +1,42 @@
+
+
+.app-details div{
+    margin: 2em;
+}
+
+.app-details h2{
+    color: #ffb703;
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+.app-details p{
+    font-size: 1.1em;
+    color: #ffb703;
+    margin: 1em 0;
+}
+
+.app-details span{
+    color: white;
+}
+
+
+
+.app-details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.app-details button{
+    background-color: #ffb703;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em;
+    font-size: 1em;
+    font-weight: 900;
+    margin: 1em 0;
+}
