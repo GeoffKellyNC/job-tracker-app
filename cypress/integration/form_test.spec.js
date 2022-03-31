@@ -66,7 +66,6 @@ describe("Application Form", () => {
         backButton().should("exist")
 
         cy.contains(/job tracker/i).should('exist')
-
     })
 
     it("Form is working", () => {
@@ -82,16 +81,5 @@ describe("Application Form", () => {
         contactPositionInput().type("Test Position")
         currentStatusSelect().select("Interview Phase")
         otherNotesTextarea().type("Test Notes")
-
     })
-
-
-
-
-
-
-
-
-
-
 })

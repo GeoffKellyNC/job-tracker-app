@@ -163,8 +163,12 @@ const handleChange = (e) => {
                     onChange = {handleChange} 
                     className = 'col-4'>
                 </textarea>
-                <button type = 'submit'>Submit</button>
+
+            {/*//? Buttons */}
+            <div className = 'col-1'>
+                <button className = 'submit-btn' type = 'submit'>Submit</button>
                 <button class = 'back-btn' onClick = {() => {history.push('/')}}>Back To List</button>
+            </div>
         </form>
     </div>
   )

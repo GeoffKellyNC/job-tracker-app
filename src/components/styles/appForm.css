@@ -2,13 +2,14 @@
 
 form{
     display: grid;
-    grid-template-columns: 12em 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
     margin-top: 2em;
 }
 
 
-input, textarea, select{
+input,select{
     width: 50%;
     margin: auto;
     height: 3em;
@@ -20,6 +21,19 @@ input, textarea, select{
     grid-column: 2/3;
 }
 
+textarea{
+    width: 88%;
+    margin: auto;
+    height: 3em;
+    border-radius: 5px;
+    border: 1px solid #219EBC;
+    padding: 0 1em;
+    font-size: 1rem;
+    margin-bottom: 1em;
+    grid-column: 2/3;
+    margin-left: -4em;
+}
+
 input::placeholder, textarea::placeholder{
     color: rgb(50, 60, 66);
     font-family: 'Poppins', sans-serif;
@@ -29,12 +43,13 @@ label{
     display: block;
     font-size: 1.2rem;
     margin-bottom: 5px;
+    margin-left: 1em;
     font-family: 'Poppins', sans-serif;
     color: white;
     grid-column: 1/2;
 }
 
-form button{
+.submit-btn, .back-btn{
     grid-column: 2/3;
     width: 20%;
     font-family: 'Poppins', sans-serif;
@@ -43,18 +58,21 @@ form button{
     border: none;
     border-radius: 5px;
     background-color: #FB8500;
-    color: white;
-    
+    color: white; 
 }
 
 .back-btn{
-    /* grid-column: 1/2; */
-    font-family: 'Poppins', sans-serif;
-    margin: 0.2em;
-    padding: 1em;
-    border: none;
-    background-color: #FB8500;
-    color: white;
+    width: 8em;
+}
+
+.submit-btn:hover, .back-btn:hover{
+    background-color: white;
+    color: #FB8500;
+    cursor: pointer;
+}
+
+.col-1{
+    grid-column: 1/2;
 }
 
 .col-3{
