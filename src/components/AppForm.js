@@ -18,6 +18,8 @@ const handleChange = (e) => {
   return (
     <div className = 'form-container'>
         <form onSubmit={submit}>
+
+            {/*//? Company Name Input*/}
                 <label>Company Name</label>
                 <input
                     name = 'companyName'
@@ -26,6 +28,8 @@ const handleChange = (e) => {
                     value = {values.companyName}
                     onChange = {handleChange}
                     />
+
+            {/*//? Company Phone Input*/}
                 <label>Company Phone</label>
                 <input 
                     name = 'companyPhone'
@@ -34,14 +38,18 @@ const handleChange = (e) => {
                     value = {values.companyPhone}
                     onChange = {handleChange}
                 />
+
+            {/*//? Company Website Input*/}
                 <label>Company Web</label>
                 <input
                     name = 'companyWeb'
-                    type = 'text'
+                    type = 'url'
                     placeholder = 'Company Web Address'
                     value = {values.companyWeb}
                     onChange = {handleChange}
                 />
+
+            {/*//? Job Title Input*/}
                 <label>Job Title</label>
                 <input
                     name = 'jobTitle'
@@ -50,6 +58,8 @@ const handleChange = (e) => {
                     value = {values.jobTitle}
                     onChange = {handleChange}
                 />
+
+            {/*//? Date Applied Input*/}
                 <label>Date Applied</label>
                 <input
                     name = 'dateApplied'
@@ -58,6 +68,8 @@ const handleChange = (e) => {
                     value = {values.dateApplied}
                     onChange = {handleChange}
                 />
+
+            {/*//? Job Discovery Input*/}
                 <label>Job Discovery</label>
                 <input
                     name = 'jobDiscovery'
@@ -66,6 +78,8 @@ const handleChange = (e) => {
                     value = {values.jobDiscovery}
                     onChange = {handleChange}
                 />
+
+            {/*//? Salary Info Input*/}
                 <label>Salary Info</label>
                 <input
                     name = 'salaryInfo'
@@ -74,12 +88,16 @@ const handleChange = (e) => {
                     value = {values.salaryInfo}
                     onChange = {handleChange}
                 />
+
+            {/*//? Contacted Select */}
                 <label className = 'col-3 row-1'>Contacted</label>
                 <select className = 'col-4 row-1' name = 'contactQues' value = {values.contactQues} onChange = {handleChange}>
                     <option value = ''>--Select Option--</option>
                     <option value = 'Yes'>Yes</option>
                     <option value = 'No'>No</option>
                 </select>
+
+            {/*//? Contact Name Input*/}
                 <label className = 'col-3 row-2'>Contact Name</label>
                 <input
                     name = 'contactName'
@@ -89,6 +107,8 @@ const handleChange = (e) => {
                     onChange = {handleChange}
                     className = 'col-4 row-2'
                 />
+
+            {/*//? Contact Phone Input*/}
                 <label className = 'col-3 row-3' >Contact Phone</label>
                 <input
                     name = 'contactPhone'
@@ -98,15 +118,19 @@ const handleChange = (e) => {
                     onChange = {handleChange}
                     className = 'col-4 row-3'
                 />
+
+            {/*//? Contact Email Input*/}
                 <label className = 'col-3 row-4'>Contact Email</label>
                 <input
                     name = 'contactEmail'
-                    type = 'email'
+                    type = 'text'
                     placeholder = 'Contact Email'
                     value = {values.contactEmail}
                     onChange = {handleChange}
                     className = 'col-4 row-4'
                 />
+
+            {/*//? Contact Position Input*/}
                 <label className = 'col-3 row-5'>Contact Position</label>
                 <input
                     name = 'contactPosition'
@@ -116,6 +140,8 @@ const handleChange = (e) => {
                     onChange = {handleChange}
                     className = 'col-4 row-5'
                 />
+
+            {/*//? Current Status Select */}
                 <label className = 'col-3 row-6'>Current Status</label>
                 <select className = 'col-4 row-6' name = 'currentStatus' value = {values.currentStatus} onChange = {handleChange}>
                     <option value = ''>--Select Option--</option>
@@ -126,6 +152,8 @@ const handleChange = (e) => {
                     <option value = 'contacted'>Contacted</option>
                     <option value = 'other'>Other</option>
                 </select>
+
+            {/*//? Other Notes Textarea*/}
                 <label className = 'col-3'>Other Notes:</label>
                 <textarea
                     name = 'otherNotes'

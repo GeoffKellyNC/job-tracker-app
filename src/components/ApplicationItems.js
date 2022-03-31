@@ -3,6 +3,9 @@ import { Link, useHistory } from 'react-router-dom';
 
 import './styles/ApplicationItems.css'
 
+//? Import Icons using React Icons
+import { DiGithubAlt } from "react-icons/di";
+
 function ApplicationItems({ application, deleteApp}) {
     
     const history = useHistory();
@@ -12,6 +15,7 @@ function ApplicationItems({ application, deleteApp}) {
             {application.map(app => {
                 return (
                     <div className = 'app-home-items'  key={app.id}>
+                        <DiGithubAlt className = 'item-icon' />
                         <Link to={`/${app.id}`}>
                             <h4>{app.companyName}</h4></Link>
                         <h3>Position:
