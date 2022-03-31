@@ -4,11 +4,12 @@ import { useParams } from 'react-router-dom'
 function EditForm({ details, updateEdit }) {
   
   const { appID } = useParams();
-
+//? Initializing state to the Application to be edited
   const [editApp, setEditApp] = useState(details.find(app => app.id === appID))
 
   
 
+  //? Handling Form Change Event
   const handleChange = (e) => {
     const {name,value} = e.target
     setEditApp({...editApp, [name]: value})
