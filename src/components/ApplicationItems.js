@@ -1,3 +1,4 @@
+/* eslint-disable no-lone-blocks */
 import React from 'react'
 import { Link, useHistory } from 'react-router-dom';
 
@@ -13,8 +14,34 @@ function ApplicationItems({ application, deleteApp}) {
     return (
         <>
             {application.map(app => {
+
+                let containerClass;
+                let status = app.currentStatus;
+                
+
+                switch(status) {
+                    case status = ('rejected'):
+                        containerClass = 'app-home-items rejected'
+                        break;
+                    case status = ('approved'):
+                        containerClass = 'app-home-items approved'
+                        break;
+                    case status = ('pending'):
+                        containerClass = 'app-home-items pending'
+                        break;
+                    case status = ('applied'):
+                        containerClass = 'app-home-items applied'
+                        break; 
+                    default:
+                        containerClass = 'app-home-items'
+                        break;
+                }
+
+                console.log(containerClass)
+                console.log(status)
+
                 return (
-                    <div className = 'app-home-items'  key={app.id}>
+                    <div className = {containerClass}  key={app.id}>
                         <DiGithubAlt className = 'item-icon' />
                         <Link to={`/${app.id}`}>
                             <h4>{app.companyName}</h4></Link>

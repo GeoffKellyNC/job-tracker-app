@@ -9,6 +9,7 @@ import AppForm from './components/AppForm'
 import AppDetails from './components/AppDetails'
 import EditForm  from './components/EditForm';
 import Stats from './components/Stats';
+import CompanyData from './components/CompanyData';
 
 //? Initial Form Values Object
 const initialFormValues = {
@@ -127,6 +128,9 @@ function App() {
       <Switch >
         <Route path = {`/edit/:appID`}>
           <EditForm details = {application}  updateEdit = {updateEdit}  />
+        </Route>
+        <Route path = {`/companyData`}>
+          <CompanyData data = {application} />
         </Route>
         <Route path = {"/stats"}>
           <Stats applicationData = {application} totalApps = {totalApps} />

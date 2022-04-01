@@ -24,6 +24,13 @@ a{
     border-radius: 5px;
 }
 
+.rejected{
+    background-color: #FF4D4D;
+}
+.applied{
+    background-color: #1057fb;
+}
+
 .app-home-items h3{
     color: #ffb703;
     display: flex;
@@ -61,6 +68,8 @@ a{
     border-radius: 10px;
     box-shadow: 0px 0px 5px white;
 }
+
+
 
 .info-btn:hover, .del-btn:hover, .edit-btn:hover{
     background-color: white;

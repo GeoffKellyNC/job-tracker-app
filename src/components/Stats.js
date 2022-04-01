@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import { v4 as uuid } from 'uuid';
 
 
 
@@ -9,6 +10,7 @@ const Stats = ({ applicationData, totalApps }) => {
     const [total, setTotal] = useState(totalApps);
     const [companies, setCompanies] = useState([]);
     const [numOfInterviews, setInterviews] = useState(0);
+
 //! --End State -- //
 
 
@@ -28,6 +30,7 @@ const Stats = ({ applicationData, totalApps }) => {
             if (app.currentStatus === "Interview Phase") {
                 setInterviews(numOfInterviews + 1);
             }
+            return null;
         })
     }, [data])
 

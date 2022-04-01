@@ -71,6 +71,30 @@ label{
     cursor: pointer;
 }
 
+
+/* !Edit form Buttons */
+.edit-sbmt-btn, .edit-back-btn{
+    grid-column: 2/3;
+    width: 12em;
+    font-family: 'Poppins', sans-serif;
+    margin: 3em;
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #FB8500;
+    color: white; 
+}
+
+.edit-sbmt-btn:hover, .edit-back-btn:hover{
+    background-color: white;
+    color: #FB8500;
+    cursor: pointer;
+}
+
+
+
+
+
 .col-1{
     grid-column: 1/2;
 }
