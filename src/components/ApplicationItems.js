@@ -37,9 +37,7 @@ function ApplicationItems({ application, deleteApp}) {
                         break;
                 }
 
-                console.log(containerClass)
-                console.log(status)
-
+             
                 return (
                     <div className = {containerClass}  key={app.id}>
                         <DiGithubAlt className = 'item-icon' />

@@ -10,6 +10,7 @@ import AppDetails from './components/AppDetails'
 import EditForm  from './components/EditForm';
 import Stats from './components/Stats';
 import CompanyData from './components/CompanyData';
+import About from './components/About';
 
 //? Initial Form Values Object
 const initialFormValues = {
@@ -47,11 +48,47 @@ const demoApplication = {
   otherNotes: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
 }
 
+const demoApplication2 = {
+  id: uuid(),
+  companyName: 'Google',
+  companyPhone: '123-456-7890',
+  companyWeb: 'www.google.com',
+  jobTitle: 'Team Lead',
+  dateApplied: '2022-03-01',
+  jobDiscovery: 'Google',
+  salaryInfo: '$110,000',
+  contactQues: 'Yes',
+  contactName: 'John Doe',
+  contactPhone: '123-456-7890',
+  contactEmail: 'JohnDoe@email.com',
+  contactPosition: 'Manager',
+  currentStatus: 'Interview Phase',
+  otherNotes: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+}
+
+const demoApplication3 = {
+  id: uuid(),
+  companyName: 'Epic Games',
+  companyPhone: '123-456-7890',
+  companyWeb: 'www.epicgames.com',
+  jobTitle: 'Web Developer',
+  dateApplied: '2022-04-12',
+  jobDiscovery: 'Epic Games',
+  salaryInfo: '$90,000',
+  contactQues: 'Yes',
+  contactName: 'John Doe',
+  contactPhone: '123-456-7890',
+  contactEmail: 'johndoe@email.com',
+  contactPosition: 'Manager',
+  currentStatus: 'applied',
+  otherNotes: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+}
+
 function App() {
   //? State
 
   const [formValues, setFormValues] = useState(initialFormValues);
-  const [application,setApplication] = useState([demoApplication]);
+  const [application,setApplication] = useState([demoApplication,demoApplication2,demoApplication3]);
   const [appCount, setAppCount] = useState(application.length);
   const [totalApps, setTotalApps] = useState(application.length);
   //? --End State -- //
@@ -128,6 +165,9 @@ function App() {
       <Switch >
         <Route path = {`/edit/:appID`}>
           <EditForm details = {application}  updateEdit = {updateEdit}  />
+        </Route>
+        <Route path = {"/about"}>
+          <About />
         </Route>
         <Route path = {`/companyData`}>
           <CompanyData data = {application} />

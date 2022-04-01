@@ -22,17 +22,12 @@ const Stats = ({ applicationData, totalApps }) => {
 
     useEffect(() => {
         const companyNames = data.map(app => app.companyName);
-        setCompanies(companyNames);
+        const filteredName = companyNames.filter(name => companies.includes(name) === false);
+        setCompanies(filteredName);
+        
     },[data])
 
-    useEffect(() => {
-        data.map(app => {
-            if (app.currentStatus === "Interview Phase") {
-                setInterviews(numOfInterviews + 1);
-            }
-            return null;
-        })
-    }, [data])
+ 
 
 //! --End Effects-- //
 

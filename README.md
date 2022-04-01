@@ -1,6 +1,26 @@
 # job-tracker-app
 App designed to track applied for jobs
 
+##Features: 
+- [x] Create a job application
+- [x] View all jobs
+- [x] View all job applications
+- [x] View stats Page that shows you stats about applications
+- [x] Track applications and their status
+- [x] # Language: JavaScript, ReactJS, HTML, CSS.
+- [x] # Path: src/App.js
+
+## New Features and Bug Fixes (Change Log)
+------------------------------------------------------------
+#  NEW FEATURES AND CHANGES 04/01/2022
+    - Added styling to application's listed on home page to have        background color reflect the current status of the application.
+    - Added styling to the application's listed on the home page to have a border around the application.
+    - Added an about Component page and route that will display information about the application.
+
+# BUGS FIXED 04/01/2022
+    - Fixed bug where the application's status was not being updated when the application was updated.
+
+
 -----------------------------------------------------------
 # NEW FEATURES AND CHANGES 03/31/2022
     -Added Stats Page that shows the following stats:
@@ -15,8 +35,5 @@ App designed to track applied for jobs
     -Fixed bug where the user could not delete a job
     -Fixed bug where the user could not edit a job
 
-
 -----------------------------------------------------------
 
-#  NEW FEATURES AND CHANGES 04/01/2022
-    - Added styling to application's listed on home page to have background color reflect the current status of the application.
