@@ -8,6 +8,7 @@ import Home from './components/Home';
 import AppForm from './components/AppForm'
 import AppDetails from './components/AppDetails'
 import EditForm  from './components/EditForm';
+import Stats from './components/Stats';
 
 //? Initial Form Values Object
 const initialFormValues = {
@@ -51,6 +52,7 @@ function App() {
   const [formValues, setFormValues] = useState(initialFormValues);
   const [application,setApplication] = useState([demoApplication]);
   const [appCount, setAppCount] = useState(application.length);
+  const [totalApps, setTotalApps] = useState(application.length);
   //? --End State -- //
 
   //? History
@@ -90,6 +92,7 @@ function App() {
     setApplication([...application, newApplication]);
     setFormValues(initialFormValues);
     setAppCount(appCount + 1);
+    setTotalApps(totalApps + 1);
     history.push('/');
   }
 
@@ -111,10 +114,11 @@ function App() {
     }
     //! --End Edit Form Function --//
 
+
   
 //? --End Form Controllers -- //
 
-
+//? --Component Functions -- //
   return (
     <div className="App">
       <header>
@@ -123,6 +127,9 @@ function App() {
       <Switch >
         <Route path = {`/edit/:appID`}>
           <EditForm details = {application}  updateEdit = {updateEdit}  />
+        </Route>
+        <Route path = {"/stats"}>
+          <Stats applicationData = {application} totalApps = {totalApps} />
         </Route>
         <Route  path = "/form" >
           <AppForm values = {formValues} update = {updateValues} submit = {handelSubmit}/>

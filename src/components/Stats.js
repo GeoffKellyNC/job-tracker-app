@@ -1,0 +1,51 @@
+import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+
+
+
+const Stats = ({ applicationData, totalApps }) => {
+ //! State
+    const [data, setData] = useState(applicationData);
+    const [total, setTotal] = useState(totalApps);
+    const [companies, setCompanies] = useState([]);
+    const [numOfInterviews, setInterviews] = useState(0);
+//! --End State -- //
+
+
+//! -- History -- //
+    const history = useHistory();
+//! --End History -- //
+
+//! -- Effects-- //
+
+    useEffect(() => {
+        const companyNames = data.map(app => app.companyName);
+        setCompanies(companyNames);
+    },[data])
+
+    useEffect(() => {
+        data.map(app => {
+            if (app.currentStatus === "Interview Phase") {
+                setInterviews(numOfInterviews + 1);
+            }
+        })
+    }, [data])
+
+//! --End Effects-- //
+
+  
+
+
+
+    return (
+        <div className = 'stats-container'>
+            <h2>Number of Applications: {total}</h2>
+            <h2>Number of Companies: {companies.length}</h2>
+            <h2>Companies: {companies.join(', ')}</h2>
+            <h2>Number of Interviews: {numOfInterviews}</h2>
+            <button onClick = {() => {history.push("/")}}>Go Back</button>
+        </div>
+    )
+}
+
+export default Stats;
