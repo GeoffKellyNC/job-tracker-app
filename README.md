@@ -37,7 +37,8 @@ App designed to track applied for jobs
         currentStatus: '',
         otherNotes: '',
     }]`
-- [x] Added ability to toggle between default card view and a list view.
+- [x] Added ability to toggle between default card view and a list view on home page. 
+- [x] Added various other performance and styling changes and optimizations.
 
 
 
