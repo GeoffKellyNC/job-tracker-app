@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import { Route, Switch, useHistory } from 'react-router-dom';
 
-//? Components
+//! Components
 import Home from './components/Home';
 import AppForm from './components/AppForm'
 import AppDetails from './components/AppDetails'
@@ -12,7 +12,7 @@ import Stats from './components/Stats';
 import CompanyData from './components/CompanyData';
 import About from './components/About';
 
-//? Initial Form Values Object
+//! Initial Form Values Object
 const initialFormValues = {
   companyName: '',
   companyPhone: '',
@@ -85,20 +85,20 @@ const demoApplication3 = {
 }
 
 function App() {
-  //? State
+  //! State
 
   const [formValues, setFormValues] = useState(initialFormValues);
   const [application,setApplication] = useState([demoApplication,demoApplication2,demoApplication3]);
   const [appCount, setAppCount] = useState(application.length);
   const [totalApps, setTotalApps] = useState(application.length);
-  //? --End State -- //
+  //! --End State -- //
 
-  //? History
+  //! History
   const history = useHistory();
 
-  //? --End History -- //
+  //! --End History -- //
 
-//? Form Controllers
+//! Form Controllers
   const updateValues = (inputName, inputValue) => {
     setFormValues({
       ...formValues,
@@ -154,9 +154,9 @@ function App() {
 
 
   
-//? --End Form Controllers -- //
+//! --End Form Controllers -- //
 
-//? --Component Functions -- //
+//! --Component Functions -- //
   return (
     <div className="App">
       <header>

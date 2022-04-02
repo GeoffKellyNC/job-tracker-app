@@ -1,6 +1,7 @@
 /* eslint-disable no-lone-blocks */
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom';
+import axios from 'axios';
 
 import './styles/ApplicationItems.css'
 
@@ -8,13 +9,15 @@ import './styles/ApplicationItems.css'
 import { DiGithubAlt } from "react-icons/di";
 
 function ApplicationItems({ application, deleteApp}) {
+    //! -- State --
     
     const history = useHistory();
+
+
 
     return (
         <>
             {application.map(app => {
-
                 let containerClass;
                 let status = app.currentStatus;
                 
@@ -35,12 +38,18 @@ function ApplicationItems({ application, deleteApp}) {
                     default:
                         containerClass = 'app-home-items'
                         break;
+                    
+                   
+                    
                 }
-
-             
                 return (
                     <div className = {containerClass}  key={app.id}>
-                        <DiGithubAlt className = 'item-icon' />
+                        <img 
+                            src={app.companyName.length > 0 ? `https://logo.clearbit.com/${app.companyWeb}`:
+                                <DiGithubAlt 
+                                    className = '.item-icon' />} 
+                            alt={app.companyName} 
+                            className = 'item-icon' />
                         <Link to={`/${app.id}`}>
                             <h4>{app.companyName}</h4></Link>
                         <h3>Position:

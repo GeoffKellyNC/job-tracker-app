@@ -20,10 +20,20 @@ function Home({ application, appCount, deleteApp }) {
         <div className = 'home-container'>
             <div className = 'top-text'>
                 <h2>Current Application Count: {appCount}</h2>
-                <button onClick = {addNewButton}>Add Application</button>
-                <button onClick = {() => {history.push("/stats")}}>Stats</button>
+                <div className = 'top-btns'>
+                    <button 
+                        className = 'add-app-btn' 
+                        onClick = {addNewButton}>Add Application
+                    </button>
+                    <button 
+                        className = 'stats-btn' 
+                        onClick = {() => {history.push("/stats")}}>Stats
+                    </button>
+                </div>
             </div>
-            <ApplicationItems application = {application} deleteApp = {deleteApp} />
+            <div className = 'app-items-container'>
+                <ApplicationItems application = {application} deleteApp = {deleteApp} />
+            </div>
         </div>
     )
 }
