@@ -11,7 +11,7 @@ a{
 .app-home-items{
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
+    margin: 0 auto 5em;
     width: 30%;
     background-color: #219EBC;
     /* background-color: #f93d67; */
@@ -29,6 +29,9 @@ a{
 }
 .applied{
     background-color: #1057fb;
+}
+.offer{
+    background-color: #06b724;
 }
 
 .app-home-items h3{

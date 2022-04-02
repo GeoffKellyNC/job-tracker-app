@@ -12,6 +12,9 @@ import Stats from './components/Stats';
 import CompanyData from './components/CompanyData';
 import About from './components/About';
 
+//! -- Importing Data -- //
+import applicationData from './data/dummyData'
+
 //! Initial Form Values Object
 const initialFormValues = {
   companyName: '',
@@ -30,65 +33,11 @@ const initialFormValues = {
   otherNotes: '',
 }
 
-const demoApplication = {
-  id: uuid(),
-  companyName: 'Google',
-  companyPhone: '123-456-7890',
-  companyWeb: 'www.google.com',
-  jobTitle: 'Software Engineer',
-  dateApplied: '2022-03-01',
-  jobDiscovery: 'Google',
-  salaryInfo: '$100,000',
-  contactQues: 'Yes',
-  contactName: 'John Doe',
-  contactPhone: '123-456-7890',
-  contactEmail: 'johndoe@email.com',
-  contactPosition: 'Manager',
-  currentStatus: 'Interview Phase',
-  otherNotes: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
-}
-
-const demoApplication2 = {
-  id: uuid(),
-  companyName: 'Google',
-  companyPhone: '123-456-7890',
-  companyWeb: 'www.google.com',
-  jobTitle: 'Team Lead',
-  dateApplied: '2022-03-01',
-  jobDiscovery: 'Google',
-  salaryInfo: '$110,000',
-  contactQues: 'Yes',
-  contactName: 'John Doe',
-  contactPhone: '123-456-7890',
-  contactEmail: 'JohnDoe@email.com',
-  contactPosition: 'Manager',
-  currentStatus: 'Interview Phase',
-  otherNotes: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
-}
-
-const demoApplication3 = {
-  id: uuid(),
-  companyName: 'Epic Games',
-  companyPhone: '123-456-7890',
-  companyWeb: 'www.epicgames.com',
-  jobTitle: 'Web Developer',
-  dateApplied: '2022-04-12',
-  jobDiscovery: 'Epic Games',
-  salaryInfo: '$90,000',
-  contactQues: 'Yes',
-  contactName: 'John Doe',
-  contactPhone: '123-456-7890',
-  contactEmail: 'johndoe@email.com',
-  contactPosition: 'Manager',
-  currentStatus: 'applied',
-  otherNotes: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
-}
-
 function App() {
   //! State
 
   const [formValues, setFormValues] = useState(initialFormValues);
-  const [application,setApplication] = useState([demoApplication,demoApplication2,demoApplication3]);
+  const [application,setApplication] = useState(applicationData);
   const [appCount, setAppCount] = useState(application.length);
   const [totalApps, setTotalApps] = useState(application.length);
   //! --End State -- //
@@ -139,7 +88,8 @@ function App() {
     setApplication(newAppList);
     setAppCount(appCount - 1);
   }
-    //! --Edit Form Function --//
+    //*/: --Edit Form Function --//
+
     const updateEdit = (e, editApp) => {
       e.preventDefault();
       setApplication(application.map(app => {
@@ -150,7 +100,7 @@ function App() {
       }))
       history.push('/')
     }
-    //! --End Edit Form Function --//
+    //* --End Edit Form Function --//
 
 
   

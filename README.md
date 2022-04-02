@@ -15,8 +15,23 @@ App designed to track applied for jobs
 
 ### NEW FEATURES AND CHANGES 04/02/2022
 - [x] Added Icons to dynamically change based on the company applied to using GET https://logo.clearbit.com/:domain API call.
-- [x] 
-
+- [x] Moved Dummy application to data folder rather than have it in App.js. Also refactored data into an array of objects
+    `applicationData = [{
+        id: uuidv4(),
+        companyName: '',
+        companyPhone: '',
+        companyWeb: '',
+        jobTitle: '',
+        dateApplied: '',
+        salaryInfo: '',
+        contactQues: '',
+        contactName: '',
+        contactPhone: '',
+        contactEmail: '',
+        contactPosition: '',
+        currentStatus: '',
+        otherNotes: '',
+    }]`
 
 
 

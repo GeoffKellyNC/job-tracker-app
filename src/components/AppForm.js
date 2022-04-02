@@ -43,7 +43,7 @@ const handleChange = (e) => {
                 <label>Company Web</label>
                 <input
                     name = 'companyWeb'
-                    type = 'url'
+                    type = 'text'
                     placeholder = 'Company Web Address'
                     value = {values.companyWeb}
                     onChange = {handleChange}

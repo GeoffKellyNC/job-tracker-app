@@ -29,8 +29,8 @@ function ApplicationItems({ application, deleteApp}) {
                     case status = ('approved'):
                         containerClass = 'app-home-items approved'
                         break;
-                    case status = ('pending'):
-                        containerClass = 'app-home-items pending'
+                    case status = ('offer'):
+                        containerClass = 'app-home-items offer'
                         break;
                     case status = ('applied'):
                         containerClass = 'app-home-items applied'
