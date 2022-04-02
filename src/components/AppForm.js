@@ -24,6 +24,7 @@ const handleChange = (e) => {
                 <input
                     name = 'companyName'
                     type = 'text'
+                    required
                     placeholder='Company Name'
                     value = {values.companyName}
                     onChange = {handleChange}
@@ -34,6 +35,7 @@ const handleChange = (e) => {
                 <input 
                     name = 'companyPhone'
                     type='tel'
+                    required
                     placeholder = 'Company Phone Number'
                     value = {values.companyPhone}
                     onChange = {handleChange}
@@ -44,6 +46,7 @@ const handleChange = (e) => {
                 <input
                     name = 'companyWeb'
                     type = 'text'
+                    required
                     placeholder = 'Company Web Address'
                     value = {values.companyWeb}
                     onChange = {handleChange}
@@ -54,6 +57,7 @@ const handleChange = (e) => {
                 <input
                     name = 'jobTitle'
                     type = 'text'
+                    required
                     placeholder = 'Job Title'
                     value = {values.jobTitle}
                     onChange = {handleChange}
@@ -64,6 +68,7 @@ const handleChange = (e) => {
                 <input
                     name = 'dateApplied'
                     type = 'date'
+                    required
                     placeholder = 'Date Applied'
                     value = {values.dateApplied}
                     onChange = {handleChange}
@@ -167,7 +172,7 @@ const handleChange = (e) => {
             {/*//? Buttons */}
             <div className = 'col-1'>
                 <button className = 'submit-btn' type = 'submit'>Submit</button>
-                <button class = 'back-btn' onClick = {() => {history.push('/')}}>Back To List</button>
+                <button className = 'back-btn' onClick = {() => {history.push('/')}}>Back To List</button>
             </div>
         </form>
     </div>

@@ -3,6 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 
+//! -- CSS Import -- //
+import './styles/stats.css';
+
 
 
 const Stats = ({ applicationData, totalApps }) => {
@@ -42,7 +45,11 @@ const Stats = ({ applicationData, totalApps }) => {
             <h2>Number of Companies: {companies.length}</h2>
             <h2>Companies: {companies.join(', ')}</h2>
             <h2>Number of Interviews: {numOfInterviews}</h2>
-            <button onClick = {() => {history.push("/")}}>Go Back</button>
+            <button
+                 onClick = {() => {history.push("/")}}
+                className = 'back-btn-stats' >
+                Go Back
+            </button>
         </div>
     )
 }

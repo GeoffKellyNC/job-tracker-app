@@ -10,16 +10,21 @@ a{
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto 5em;
-    width: 30%;
+    width: 30em;
     background-color: #219EBC;
     /* background-color: #f93d67; */
     padding: 0.5em;
     border-radius: 5px;
-    border: 3px solid #FB8500;
+    border: 3px solid #FFB704;
     height: 20em;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    transition: 0.5s;
+}
+
+.app-home-items:hover{
+   transform: scale(1.1);
 }
 
 .rejected{
@@ -74,6 +79,8 @@ a{
 
 .btn-container{
     display: flex;
+    width: 100%;
+    justify-content: space-around;
 }
 
 .btn-container button {
@@ -81,19 +88,24 @@ a{
     margin: 0.2em;
     padding: 1em;
     border: none;
-    background-color: #FB8500;
     color: white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px black;
+    width: 6em;
+    background-image: linear-gradient(to right, #FF512F 0%, #DD2476  51%, #FF512F  100%);
+    transition: 0.5s;
+    background-size: 200% auto;
 }
 
 
-
 .info-btn:hover, .del-btn:hover, .edit-btn:hover{
-    background-color: white;
-    color: #FB8500;
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+    transform: scale(1.1);
 }
 
 .item-icon{
     font-size: 1.5em;
 }
+

@@ -8,10 +8,8 @@ import './styles/ApplicationItems.css'
 import { DiGithubAlt } from "react-icons/di";
 
 function ApplicationItems({ application, deleteApp}) {
-    //! -- State --
     
     const history = useHistory();
-
 
 
     return (
@@ -43,16 +41,13 @@ function ApplicationItems({ application, deleteApp}) {
                     default:
                         containerClass = 'app-home-items'
                         break;
-                    
-                   
-                    
                 }
                 return (
                     <div className = {containerClass}  key={app.id}>
                         <img 
-                            src={app.companyName.length > 0 ? `https://logo.clearbit.com/${app.companyWeb}`:
+                            src={app.companyName.length > 1 ? `https://logo.clearbit.com/${app.companyWeb}`:
                                 <DiGithubAlt 
-                                    className = '.item-icon' />} 
+                                    className = 'item-icon' />} 
                             alt={app.companyName} 
                             className = 'item-icon' />
                         <Link to={`/${app.id}`}>
