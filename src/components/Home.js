@@ -34,7 +34,7 @@ function Home({ application, appCount, deleteApp }) {
             <div className = 'app-items-container'>
                 <ApplicationItems application = {application} deleteApp = {deleteApp} />
             </div>
-        </div>
+        </div> 
     )
 }
 
