@@ -5,6 +5,8 @@ body{
     background: -webkit-linear-gradient(171deg, rgba(1,48,71,1) 65%, rgba(251,133,0,1) 100%);
     background: linear-gradient(171deg, rgba(1,48,71,1) 65%, rgba(251,133,0,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#013047",endColorstr="#fb8500",GradientType=1);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 h1{
