@@ -12,13 +12,23 @@ App designed to track applied for jobs
 
 ## New Features and Bug Fixes (Change Log)
 ------------------------------------------------------------
-#  NEW FEATURES AND CHANGES 04/01/2022
+
+### NEW FEATURES AND CHANGES 04/02/2022
+- [x] Added Icons to dynamically change based on the company applied to using GET https://logo.clearbit.com/:domain API call.
+- [x] 
+
+
+
+
+
+------------------------------------------------------------
+###  NEW FEATURES AND CHANGES 04/01/2022
     - Added styling to application's listed on home page to have        background color reflect the current status of the application.
     - Added styling to the application's listed on the home page to have a border around the application.
     - Added an about Component page and route that will display information about the application.
     -Added Labeler git task
 
-# BUGS FIXED 04/01/2022
+### BUGS FIXED 04/01/2022
     - Fixed bug where the application's status was not being updated when the application was updated.
 
 
@@ -34,7 +44,7 @@ App designed to track applied for jobs
 # Bugs Fixed 03/31/2022
     -Fixed bug where the user could not add a new job
     -Fixed bug where the user could not delete a job
-    -Fixed bug where the user could not edit a job
+    - Fixed bug where the user could not edit a job
 
 -----------------------------------------------------------
 
