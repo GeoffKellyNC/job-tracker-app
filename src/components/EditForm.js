@@ -1,19 +1,30 @@
 import React, { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
+
+
+
+
+
+
 
 function EditForm({ details, updateEdit }) {
   
   const { appID } = useParams();
-//? Initializing state to the Application to be edited
+//! Initializing state to the Application to be edited
   const [editApp, setEditApp] = useState(details.find(app => app.id === appID))
+
+//! --History -- //
+    const history = useHistory();
+//! --End History -- //
 
   
 
-  //? Handling Form Change Event
+//!-- Handling Form Change Events --//
   const handleChange = (e) => {
     const {name,value} = e.target
     setEditApp({...editApp, [name]: value})
   }
+//!-- End Form Change Events --//
 
 
   return (
@@ -136,7 +147,8 @@ function EditForm({ details, updateEdit }) {
                     onChange = {handleChange} 
                     className = 'col-4'>
                 </textarea>
-                <button type = 'submit'>Submit</button>
+                <button className = "edit-sbmt-btn" type = 'submit'>Submit Changes</button>
+                <button className = "edit-back-btn" onClick = {() => {history.push("/")}}>Go back</button>
         </form>
     </div>
   )

@@ -21,6 +21,7 @@ function Home({ application, appCount, deleteApp }) {
             <div className = 'top-text'>
                 <h2>Current Application Count: {appCount}</h2>
                 <button onClick = {addNewButton}>Add Application</button>
+                <button onClick = {() => {history.push("/stats")}}>Stats</button>
             </div>
             <ApplicationItems application = {application} deleteApp = {deleteApp} />
         </div>
