@@ -15,7 +15,7 @@ const applicationData =  [
         contactPhone: '123-456-7890',
         contactEmail: 'johndoe@email.com',
         contactPosition: 'Manager',
-        currentStatus: 'Interview Phase',
+        currentStatus: 'other',
         otherNotes: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
     },
     
@@ -51,7 +51,7 @@ const applicationData =  [
         contactPhone: '123-456-7890',
         contactEmail: 'johndoe@microsoft.com',
         contactPosition: 'Manager',
-        currentStatus: 'Interview Phase',
+        currentStatus: 'offer',
         otherNotes: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
     },
 
@@ -69,7 +69,7 @@ const applicationData =  [
         contactPhone: '123-456-7890',
         contactEmail: 'johndoe@airbnb.com',
         contactPosition: 'Manager',
-        currentStatus: 'Interview Phase',
+        currentStatus: 'rejected',
         otherNotes: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
     },
 
@@ -87,10 +87,10 @@ const applicationData =  [
         contactPhone: '123-456-7890',
         contactEmail: 'johndoe@amazon.com',
         contactPosition: 'Manager',
-        currentStatus: 'Interview Phase',
+        currentStatus: 'contacted',
         otherNotes: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
     },
-    
+
     {
         id: uuid(),
         companyName: 'Netflix',

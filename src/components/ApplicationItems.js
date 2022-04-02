@@ -26,8 +26,8 @@ function ApplicationItems({ application, deleteApp}) {
                     case status = ('rejected'):
                         containerClass = 'app-home-items rejected'
                         break;
-                    case status = ('approved'):
-                        containerClass = 'app-home-items approved'
+                    case status = ('Interview Phase'):
+                        containerClass = 'app-home-items interview'
                         break;
                     case status = ('offer'):
                         containerClass = 'app-home-items offer'
@@ -35,6 +35,12 @@ function ApplicationItems({ application, deleteApp}) {
                     case status = ('applied'):
                         containerClass = 'app-home-items applied'
                         break; 
+                    case status = ('contacted'):
+                        containerClass = 'app-home-items contacted'
+                        break;
+                    case status = ('other'):
+                        containerClass = 'app-home-items other'
+                        break;
                     default:
                         containerClass = 'app-home-items'
                         break;

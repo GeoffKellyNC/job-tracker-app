@@ -28,10 +28,19 @@ a{
     background-color: #FF4D4D;
 }
 .applied{
-    background-color: #1057fb;
+    background-color: #219EBC;
 }
 .offer{
     background-color: #06b724;
+}
+.interview{
+    background-color: #e320edb7;
+}
+.contacted{
+    background-color: #7e7800;
+}
+.other{
+    background-color: #061dc8;
 }
 
 .app-home-items h3{
