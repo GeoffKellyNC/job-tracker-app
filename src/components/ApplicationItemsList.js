@@ -51,7 +51,7 @@ function ApplicationItemsList({ application, deleteApp}) {
                             alt={app.companyName} 
                             className = 'item-icon' />
                         <Link to={`/${app.id}`}>
-                            <h4>{app.companyName} List</h4></Link>
+                            <h4>{app.companyName}</h4></Link>
                         <h3>Position:
                             <p>{app.jobTitle}</p>
                         </h3>
