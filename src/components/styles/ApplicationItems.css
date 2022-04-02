@@ -20,6 +20,11 @@ a{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    transition: 0.5s;
+}
+
+.app-home-items:hover{
+   transform: scale(1.1);
 }
 
 .rejected{
