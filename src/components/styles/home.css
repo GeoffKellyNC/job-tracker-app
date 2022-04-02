@@ -40,11 +40,7 @@ h2{
     background-image: linear-gradient(to right, #FF512F 0%, #DD2476  51%, #FF512F  100%);
    transition: 0.5s;
    background-size: 200% auto;
-
-
 }
-
-
 
 .home-container{
     max-width: 100%;
@@ -59,7 +55,20 @@ h2{
     display: flex;
     align-items: center;
     margin-left: 8.2em;
+    max-width: 100%;
+}
 
+@media (max-width: 1076px){
+
+    .top-text{
+        flex-direction: column;
+        margin-bottom: 2em;
+        margin-left: 0;
+    }
+
+   .app-items-container{
+       flex-direction: column;
+   }
 }
 
 

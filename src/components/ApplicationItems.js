@@ -8,10 +8,8 @@ import './styles/ApplicationItems.css'
 import { DiGithubAlt } from "react-icons/di";
 
 function ApplicationItems({ application, deleteApp}) {
-    //! -- State --
     
     const history = useHistory();
-
 
 
     return (
@@ -43,9 +41,6 @@ function ApplicationItems({ application, deleteApp}) {
                     default:
                         containerClass = 'app-home-items'
                         break;
-                    
-                   
-                    
                 }
                 return (
                     <div className = {containerClass}  key={app.id}>
