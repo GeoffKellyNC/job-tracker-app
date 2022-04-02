@@ -42,6 +42,28 @@ h2{
    background-size: 200% auto;
 }
 
+.list-btn{
+    font-family: 'Poppins', sans-serif;
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #FB8500;
+    color: white;
+    box-shadow: 0px 0px 5px white;
+    margin-left: 6em;
+    width: 10em;
+    background-image: linear-gradient(to right, #FF512F 0%, #DD2476  51%, #FF512F  100%);
+   transition: 0.5s;
+   background-size: 200% auto;
+}
+
+.list-btn:hover{
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
 .home-container{
     max-width: 100%;
 }
