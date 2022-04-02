@@ -13,6 +13,11 @@ App designed to track applied for jobs
 ## New Features and Bug Fixes (Change Log)
 ------------------------------------------------------------
 
+
+
+
+------------------------------------------------------------
+
 ### NEW FEATURES AND CHANGES 04/02/2022
 - [x] Added Icons to dynamically change based on the company applied to using GET https://logo.clearbit.com/:domain API call.
 - [x] Moved Dummy application to data folder rather than have it in App.js. Also refactored data into an array of objects
@@ -32,6 +37,7 @@ App designed to track applied for jobs
         currentStatus: '',
         otherNotes: '',
     }]`
+- [x] Added ability to toggle between default card view and a list view.
 
 
 
