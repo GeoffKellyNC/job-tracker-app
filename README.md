@@ -1,12 +1,4 @@
-![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/geoffkellync/job-tracker-app/react?color=06b724&label=React&logo=React)
-
-![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/geoffkellync/job-tracker-app/react?color=FF512F&label=React&logo=react-router)
-
-![GitHub package.json version](https://img.shields.io/github/package-json/v/geoffkellync/job-tracker-app)
-
-![GitHub issues](https://img.shields.io/github/issues/geoffkellync/job-tracker-app?logo=github)
-
-![Website](https://img.shields.io/website?up_message=online&url=https%3A%2F%2Fgeoffkelly.dev)
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/geoffkellync/job-tracker-app/react?color=06b724&label=React&logo=React) ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/geoffkellync/job-tracker-app/react?color=FF512F&label=React&logo=react-router) ![GitHub package.json version](https://img.shields.io/github/package-json/v/geoffkellync/job-tracker-app) ![GitHub issues](https://img.shields.io/github/issues/geoffkellync/job-tracker-app?logo=github) ![Website](https://img.shields.io/website?up_message=online&url=https%3A%2F%2Fgeoffkelly.dev)
 
 
 
