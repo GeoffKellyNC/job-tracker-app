@@ -18,7 +18,8 @@ App designed to track applied for jobs
 
 ## New Features and Bug Fixes (Change Log)
 ------------------------------------------------------------
-
+### NEW FEATURES AND CHANGES 04/02/2022
+- [x] Changed styling and layout for the details page for each application
 
 
 
