@@ -25,5 +25,13 @@ export default {
         boxShadow: '0px 0px 15px #708596',
         secondaryFontWeight: '800',
         whiteBoxShadow: '0px 0px 15px #fff'
+    },
+    appStatus: {
+        applied: '#219EBC',
+        rejected: '#FF4D4D',
+        offer: '#06b724',
+        interview: '#e320edb7',
+        contacted: '#7e7800',
+        other: '#061dc8'
     }
 }

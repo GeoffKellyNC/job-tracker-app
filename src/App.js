@@ -1,16 +1,17 @@
-import './App.css';
+// import './App.css';
 import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import { Route, Switch, useHistory } from 'react-router-dom';
+import styled from 'styled-components';
 
 //! Components
-import Home from './components/Home';
-import AppForm from './components/AppForm'
-import AppDetails from './components/AppDetails'
-import EditForm  from './components/EditForm';
-import Stats from './components/Stats';
+import Home from './components/sections/home/Home';
+import AppForm from './components/sections/forms/AppForm';
+import AppDetails from './components/sections/appDetails/AppDetails';
+import EditForm  from './components/sections/forms/EditForm';
+import Stats from './components/sections/stats/Stats';
 import CompanyData from './components/CompanyData';
-import About from './components/About';
+import About from './components/sections/about/About';
 
 //! -- Importing Data -- //
 import applicationData from './data/dummyData'
@@ -110,7 +111,7 @@ function App() {
 
 //! --Component Functions -- //
   return (
-    <div className="App">
+    <StyledApp className="App">
       <header>
         <h1> Job Tracker </h1>
       </header>
@@ -137,8 +138,44 @@ function App() {
           <Home application = {application} appCount = {appCount} deleteApp = {deleteApp} />
         </Route>
       </Switch>
-    </div>
+    </StyledApp>
   );
 }
 
 export default App;
+
+
+
+const StyledApp = styled.div`
+    body{
+      background-color: #F7F0F0;
+  }
+
+  h1{
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      text-align: center;
+      margin: 0 auto;
+      padding: 1em;
+      font-size: 3em;
+  }
+
+  header{
+      background-color: #FFB704;
+      /* background-color: #ff0347c7; */
+      box-shadow: 0px 0px 10px white;
+
+  }
+
+  .home-container h2{
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      margin: 0;
+      padding: 1em;
+      font-size: 2em;
+  }
+
+
+
+
+`

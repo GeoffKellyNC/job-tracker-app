@@ -117,22 +117,22 @@ const StyledAppItems = styled.div`
     }
 
     .rejected{
-        background-color: #FF4D4D;
+        background-color: ${pr => pr.theme.appStatus.rejected};
     }
     .applied{
-        background-color: #219EBC;
+        background-color: ${pr => pr.theme.appStatus.applied};
     }
     .offer{
-        background-color: #06b724;
+        background-color: ${pr => pr.theme.appStatus.offer};
     }
     .interview{
-        background-color: #e320edb7;
+        background-color: ${pr => pr.theme.appStatus.interview};
     }
     .contacted{
-        background-color: #7e7800;
+        background-color: ${pr => pr.theme.appStatus.contacted};
     }
     .other{
-        background-color: #061dc8;
+        background-color: ${pr => pr.theme.appStatus.other};
     }
 
     .app-home-items h3{
