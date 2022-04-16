@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
-
+import styled from 'styled-components'
 
 
 
@@ -28,8 +28,7 @@ function EditForm({ details, updateEdit }) {
 
 
   return (
-    <div>
-      <form onSubmit={(e) => updateEdit(e, editApp)}>
+      <StyledEditForm onSubmit={(e) => updateEdit(e, editApp)}>
                 <label>Company Name</label>
                 <input
                     name = 'companyName'
@@ -149,9 +148,141 @@ function EditForm({ details, updateEdit }) {
                 </textarea>
                 <button className = "edit-sbmt-btn" type = 'submit'>Submit Changes</button>
                 <button className = "edit-back-btn" onClick = {() => {history.push("/")}}>Go back</button>
-        </form>
-    </div>
+        </StyledEditForm>
   )
 }
 
 export default EditForm
+
+
+const StyledEditForm = styled.form`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    margin-top: 2em;
+
+
+    input,select{
+        width: 50%;
+        margin: auto;
+        height: 3em;
+        border-radius: 5px;
+        border: 1px solid #219EBC;
+        padding: 0 1em;
+        font-size: 1rem;
+        margin-bottom: 1em;
+        grid-column: 2/3;
+    }
+
+    textarea{
+        width: 88%;
+        margin: auto;
+        height: 3em;
+        border-radius: 5px;
+        border: 1px solid #219EBC;
+        padding: 0 1em;
+        font-size: 1rem;
+        margin-bottom: 1em;
+        grid-column: 2/3;
+        margin-left: -4em;
+    }
+
+    input::placeholder, textarea::placeholder{
+        color: rgb(50, 60, 66);
+        font-family: 'Poppins', sans-serif;
+    }
+
+    label{
+        display: block;
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        margin-left: 1em;
+        font-family: 'Poppins', sans-serif;
+        color: black;
+        grid-column: 1/2;
+    }
+
+    .submit-btn, .back-btn{
+        grid-column: 2/3;
+        width: 20%;
+        font-family: 'Poppins', sans-serif;
+        margin: 3em;
+        padding: 1em;
+        border: none;
+        border-radius: 5px;
+        background-color: #FB8500;
+        color: white; 
+    }
+
+    .back-btn{
+        width: 8em;
+    }
+
+    .submit-btn:hover, .back-btn:hover{
+        background-color: white;
+        color: #FB8500;
+        cursor: pointer;
+    }
+
+
+    /* !Edit form Buttons */
+    .edit-sbmt-btn, .edit-back-btn{
+        grid-column: 2/3;
+        width: 12em;
+        font-family: 'Poppins', sans-serif;
+        margin: 3em;
+        padding: 1em;
+        border: none;
+        border-radius: 5px;
+        background-color: #FB8500;
+        color: white; 
+    }
+
+    .edit-sbmt-btn:hover, .edit-back-btn:hover{
+        background-color: white;
+        color: #FB8500;
+        cursor: pointer;
+    }
+
+
+
+
+
+    .col-1{
+        grid-column: 1/2;
+    }
+
+    .col-3{
+        grid-column: 3/4;
+    }
+
+    .col-4{
+        grid-column: 4/5;
+    }
+
+    .row-1{
+        grid-row: 1;
+    }
+
+    .row-2{
+        grid-row: 2;
+    }
+
+    .row-3{
+        grid-row: 3;
+    }
+
+    .row-4{
+        grid-row: 4;
+    }
+    .row-5{
+        grid-row: 5;
+    }
+
+    .row-6{
+        grid-row: 6;
+    }
+
+
+`

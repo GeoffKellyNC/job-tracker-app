@@ -65,7 +65,7 @@ const StyledAppDetails = styled.div`
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: #f5f5f5;
+    background-color: ${pr => pr.theme.colors.white};
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
@@ -76,25 +76,30 @@ const StyledAppDetails = styled.div`
         align-items: center;
         width: 100%;
         height: 100%;
-        background-color: #f5f5f5;
+        background-color: ${pr => pr.theme.colors.white};
         border-radius: 10px;
         padding: 20px;
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        box-shadow: ${pr => pr.theme.styling.boxShadow};
     }
     .company-info h2, .job-info h2, .contact-info h2, .status-info h2 {
         font-size: 1.5rem;
+        font-family: ${pr => pr.theme.font.mainFont};
         font-weight: bold;
         margin-bottom: 10px;
         color: black;
     }
     .company-info p, .job-info p, .contact-info p, .status-info p {
-        font-size: 1rem;
+        font-size: 1.5rem;
         margin-bottom: 10px;
+        font-family: ${pr => pr.theme.font.mainFont};
+        color: ${pr => pr.theme.colors.darkBlue};
     }
     .company-info span, .job-info span, .contact-info span, .status-info span {
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: bold;
         margin-bottom: 10px;
+        font-family: ${pr => pr.theme.font.mainFont};
+        color: ${pr => pr.theme.colors.ruby};
     }
     button {
         font-size: 1rem;
