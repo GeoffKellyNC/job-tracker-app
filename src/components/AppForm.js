@@ -16,7 +16,7 @@ const handleChange = (e) => {
 }
 
   return (
-    <div className = 'form-container'>
+    // <StyledAppForm className = 'form-container'>
         <form onSubmit={submit}>
 
             {/*//? Company Name Input*/}
@@ -175,8 +175,12 @@ const handleChange = (e) => {
                 <button className = 'back-btn' onClick = {() => {history.push('/')}}>Back To List</button>
             </div>
         </form>
-    </div>
+    // </StyledAppForm>
   )
 }
 
 export default AppForm
+
+
+
+

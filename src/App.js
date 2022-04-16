@@ -75,6 +75,8 @@ function App() {
       otherNotes: formValues.otherNotes,
     }
 
+    
+
 
     setApplication([...application, newApplication]);
     setFormValues(initialFormValues);

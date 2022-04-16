@@ -24,16 +24,18 @@ const Stats = ({ applicationData, totalApps }) => {
 
 //! -- Effects-- //
 
+
     useEffect(() => {
         const companyNames = data.map(app => app.companyName);
-        const filteredName = companyNames.filter(name => companies.includes(name) === false);
-        setCompanies(filteredName);
-        
-    },[data])
+        const uniqueCompanies = [...new Set(companyNames)];
+        setCompanies(uniqueCompanies);
+    },[data]);
+
 
  
 
 //! --End Effects-- //
+
 
   
 

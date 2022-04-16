@@ -8,7 +8,8 @@ export default {
         white: '#F7F0F0',
         purple: '#57ff81fc',
         offWhite: '#f4faff',
-        grey: '#ede6e9'
+        grey: '#ede6e9',
+        yellow: '#FFCB00'
     },
     background: '#CFDBD5',
     breakPoints: {
