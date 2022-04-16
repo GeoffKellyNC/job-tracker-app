@@ -88,12 +88,9 @@ const StyledAppItems = styled.div`
     flex-wrap: wrap;
     gap: 1em;
 
-
     a{
         text-decoration: none;
     }
-
-
 
     .app-home-items{
         display: flex;
@@ -136,18 +133,20 @@ const StyledAppItems = styled.div`
     }
 
     .app-home-items h3{
-        color: #ffb703;
+        color: ${pr => pr.theme.colors.black};
         display: flex;
         font-family: ${pr => pr.theme.font.mainFont};
         font-size: 1.2em;
-        font-weight: 300;
+        font-weight: 700;
     }
 
     .app-home-items p{
-        color: white;
+        color: ${pr => pr.theme.colors.black};
         margin: 0 10px;
         font-family: ${pr => pr.theme.font.mainFont};
         font-size: 1rem;
+        font-weight: 300;
+
     }
 
     .item-icon{
@@ -159,7 +158,7 @@ const StyledAppItems = styled.div`
     }
 
     .app-home-items h4{
-        color: white;
+        color: ${pr => pr.theme.colors.black};
         font-family: ${pr => pr.theme.font.mainFont};
         font-size: 2em;
         font-weight: 300;
@@ -176,10 +175,10 @@ const StyledAppItems = styled.div`
     }
 
     .btn-container button {
-        background-color: ${pr => pr.theme.colors.darkBlue};
+        background-color: ${pr => pr.theme.colors.yellow};
         border: none;
         border-radius: 5px;
-        color: white;
+        color: ${pr => pr.theme.colors.black};
         font-family: ${pr => pr.theme.font.mainFont};
         font-size: 1em;
         font-weight: 600;
@@ -190,13 +189,13 @@ const StyledAppItems = styled.div`
     }
 
     .info-btn{
-        background-color: ${pr => pr.theme.colors.darkBlue};
+        background-color: ${pr => pr.theme.colors.yellow};
     }
 
 
 
     .info-btn:hover, .del-btn:hover, .edit-btn:hover{
-        background-color: ${pr => pr.theme.colors.ruby};
+        background-color: ${pr => pr.theme.colors.red};
         color: white;
         transform: scale(1.1);
     }

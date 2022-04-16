@@ -161,10 +161,8 @@ const StyledApp = styled.div`
   }
 
   header{
-      background-color: #FFB704;
-      /* background-color: #ff0347c7; */
+      background-color: ${pr => pr.theme.colors.orange};
       box-shadow: 0px 0px 10px white;
-
   }
 
   .home-container h2{
