@@ -17,6 +17,18 @@ App designed to track applied for jobs
 - [x] # Path: src/App.js
 
 ## New Features and Bug Fixes (Change Log)
+
+
+
+
+------------------------------------------------------------
+### NEW FEATURES AND CHANGES 04/16/2022
+- [x] Fixed bug where duplicate companies would show in companies list on stats page
+- [x] Fixed View list button to change to grid view when clicked.
+
+
+
+------------------------------------------------------------
 ------------------------------------------------------------
 ### NEW FEATURES AND CHANGES 04/02/2022
 - [x] Changed styling and layout for the details page for each application

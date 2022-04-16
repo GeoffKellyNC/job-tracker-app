@@ -33,10 +33,9 @@ function Home({ application, appCount, deleteApp }) {
                         className = 'stats-btn' 
                         onClick = {() => {history.push("/stats")}}>Stats
                     </button>
-                    <button 
-                        className = 'list-btn' 
-                        onClick = {() => setWantList(!wantList)}>List View
-                    </button>
+                    {
+                        !wantList ? <button className = 'list-btn'  onClick = {() => setWantList(!wantList)}>List View </button> : <button className = 'list-btn'  onClick = {() => setWantList(!wantList)}>Grid View </button>
+                    }
                 </div>
             </div>
             <div className = 'app-items-container'>
