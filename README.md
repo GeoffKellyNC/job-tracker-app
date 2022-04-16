@@ -1,4 +1,4 @@
-![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/geoffkellync/job-tracker-app/react?color=06b724&label=React&logo=React) ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/geoffkellync/job-tracker-app/react?color=FF512F&label=React&logo=react-router) ![GitHub package.json version](https://img.shields.io/github/package-json/v/geoffkellync/job-tracker-app) ![GitHub issues](https://img.shields.io/github/issues/geoffkellync/job-tracker-app?logo=github) ![Website](https://img.shields.io/website?up_message=online&url=https%3A%2F%2Fgeoffkelly.dev)
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/geoffkellync/job-tracker-app/react?color=06b724&label=React&logo=React) ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/geoffkellync/job-tracker-app/react-router-dom?color=red&logo=react-router&logoColor=orange) ![GitHub package.json version](https://img.shields.io/github/package-json/v/geoffkellync/job-tracker-app) ![GitHub issues](https://img.shields.io/github/issues/geoffkellync/job-tracker-app?logo=github) ![Website](https://img.shields.io/website?up_message=online&url=https%3A%2F%2Fgeoffkelly.dev) 
 
 
 
@@ -25,6 +25,7 @@ App designed to track applied for jobs
 ### NEW FEATURES AND CHANGES 04/16/2022
 - [x] Fixed bug where duplicate companies would show in companies list on stats page
 - [x] Fixed View list button to change to grid view when clicked.
+- [x] Changed App Theme and various other styling to match the new theme.
 
 
 
