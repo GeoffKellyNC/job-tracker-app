@@ -1,6 +1,10 @@
 import React from 'react'
+
 import styled from 'styled-components'
+
 import { useParams, useHistory } from 'react-router-dom'
+
+//Redux
 import { connect } from 'react-redux'
 import * as actions from '../../../redux/action-creators'
 
@@ -18,7 +22,7 @@ function AppDetails(props) {
     const { appID } = useParams();
 
 
-    //!-- Getting the app details from the API --//
+    //-- Getting the app details from the API --//
     const item = applications.find(app => app.id === appID);
 
 
@@ -64,7 +68,7 @@ const mapStateToProps = state => ({
 export default connect(mapStateToProps, actions)(AppDetails)
 
 
-//!-- Styling --//
+//-- Styling --//
 const StyledAppDetails = styled.div`
     display: flex;
     flex-direction: column;

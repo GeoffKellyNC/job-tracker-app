@@ -1,5 +1,4 @@
 import * as types from './action-types';
-// import appData from '../data/dummyDatas';
 import axios from 'axios'
 
 
@@ -46,12 +45,6 @@ export const editForm = (editedApp) => dispatch => {
     }
 }
 
-// export const deleteApplication = (id) => {
-//     return{
-//         type: types.DELETE_APPLICATION,
-//         payload: id,
-//     }
-// }
 
 export const deleteApplication = (id) => dispatch => {
     axios.delete(`https://6264452aa55d5055be47154f.mockapi.io/api/applicaitons/applications/${id}`)

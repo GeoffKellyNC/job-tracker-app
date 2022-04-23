@@ -1,12 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import { v4 as uuid } from 'uuid';
 
 import styled from 'styled-components';
 
-//! -- CSS Import -- //
-// import './styles/stats.css';
+
 
 
 
@@ -64,7 +62,6 @@ export default Stats;
 const StyledStats = styled.div`
         display: flex;
         flex-direction: column;
-        /* justify-content: center; */
         align-items: center;
         margin: 0 auto;
         padding: 1em;

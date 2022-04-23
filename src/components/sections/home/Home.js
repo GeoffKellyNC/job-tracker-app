@@ -9,7 +9,6 @@ import ApplicationItems from './ApplicationItems'
 import ApplicationItemsList from './ApplicationItemsList'
 
 
-// import './styles/home.css'
 
 function Home({ application, appCount, deleteApp }) {
     const [wantList, setWantList] = useState(false);

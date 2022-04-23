@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux';
 import * as types from './action-types';
-import applicationData from '../data/dummyDatas';
 
 
 const initialApps = []

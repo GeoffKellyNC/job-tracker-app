@@ -10,7 +10,6 @@ import { FiEdit } from 'react-icons/fi';
 import { AiFillDelete } from 'react-icons/ai';
 import { CgInfo } from 'react-icons/cg';
 
-// import './styles/ApplicationItems.css'
 
 //? Import Icons using React Icons
 import { DiGithubAlt } from "react-icons/di";
@@ -27,9 +26,6 @@ function ApplicationItems(props) {
             {applications.map(app => {
                 let containerClass;
                 let status = app.currentStatus;
-
-                console.log(app.dateApplied)
-                console.log(app.companyWeb)
                 
 
                 switch(status) {
