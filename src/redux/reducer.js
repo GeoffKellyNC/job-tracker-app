@@ -3,10 +3,10 @@ import * as types from './action-types';
 import applicationData from '../data/dummyData';
 
 
-function applications(appData = applicationData, action) {
+const initialApps = []
+function applications(appData = initialApps, action) {
     switch (action.type) {
         case types.GET_APPLICATION: {
-
             return action.payload
         }
         case types.EDIT_FORM: {

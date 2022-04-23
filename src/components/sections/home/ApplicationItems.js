@@ -22,6 +22,9 @@ function ApplicationItems({ application, deleteApp}) {
             {application.map(app => {
                 let containerClass;
                 let status = app.currentStatus;
+
+                console.log(app.dateApplied)
+                console.log(app.companyWeb)
                 
 
                 switch(status) {

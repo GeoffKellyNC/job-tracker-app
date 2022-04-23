@@ -1,5 +1,5 @@
 // import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { v4 as uuid } from 'uuid';
 import { Route, Switch, useHistory } from 'react-router-dom';
 import styled from 'styled-components';
@@ -28,7 +28,9 @@ function App(props) {
     form,
     handleSubmit,
     deleteApplication,
-    editForm } = props
+    editForm,
+    fetchApplicationData } = props
+
 
 
   //! State
@@ -36,6 +38,10 @@ function App(props) {
   const [appCount, setAppCount] = useState(applications.length);
   const [totalApps, setTotalApps] = useState(applications.length);
   //! --End State -- //
+
+  useEffect(() => {
+    fetchApplicationData()
+  }, [])
 
   //! History
   const history = useHistory();

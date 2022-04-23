@@ -31,6 +31,7 @@ App designed to track applied for jobs
 ------------------------------------------------------------
 ### NEW FEATURES AND CHANGES 04/23/2022
 - [x] Changed out buttons on Application Card on homepage to be Icons
+- [x] Added data to a mock API database and migrated Application data there
 
 
 
