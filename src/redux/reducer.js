@@ -20,6 +20,11 @@ function applications(appData = applicationData, action) {
             console.log(newApplications)
             return appData = newApplications
         }
+        case types.DELETE_APPLICATION: {
+            const id = action.payload
+            console.log(`Deleting ${id}`)
+            return appData.filter(app => app.id !== id)
+        }
         default: 
             return appData
     }
@@ -51,11 +56,6 @@ function form(formState = initialForm,action){
         case types.HANDLE_FORM_SUBMIT: {
             const  newApplication  = action.payload
             return  applicationData.push(newApplication)
-        }
-        case types.DELETE_APPLICATION: {
-            const id = action.payload
-            console.log(`Deleting ${id}`)
-            return applicationData.filter(app => app.id !== id)
         }
         default: 
             return formState
