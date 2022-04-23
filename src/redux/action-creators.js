@@ -17,12 +17,7 @@ export const deleteApplication = (id) => {
     }
 }
 
-export const editForm = (editedApp) => {
-    return{
-        type: types.EDIT_FORM,
-        payload: editedApp,
-    }
-}
+
 
 export const fetchApplicationData = () => dispatch =>{
     axios.get('https://6264452aa55d5055be47154f.mockapi.io/api/applicaitons/applications')
@@ -40,5 +35,19 @@ export const handleSubmit = (newApplication) => dispatch => {
             dispatch({ type: types.HANDLE_FORM_SUBMIT, payload: newApp })
         })
         .catch(err => console.error(err))
+}
+
+export const editForm = (editedApp) => dispatch => {
+    axios.put(`https://6264452aa55d5055be47154f.mockapi.io/api/applicaitons/applications/${editedApp.id}`, editedApp)
+        .then(res => {
+            const newApp = res.data
+            dispatch({ type: types.EDIT_FORM, payload: newApp })
+        }
+        )
+        .catch(err => console.error(err))
+    return{
+        type: types.EDIT_FORM,
+        payload: editedApp,
+    }
 }
 
