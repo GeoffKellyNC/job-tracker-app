@@ -10,12 +10,7 @@ export const changeInput = ({name, value}) => {
     }
 }
 
-export const deleteApplication = (id) => {
-    return{
-        type: types.DELETE_APPLICATION,
-        payload: id,
-    }
-}
+
 
 
 
@@ -50,4 +45,22 @@ export const editForm = (editedApp) => dispatch => {
         payload: editedApp,
     }
 }
+
+// export const deleteApplication = (id) => {
+//     return{
+//         type: types.DELETE_APPLICATION,
+//         payload: id,
+//     }
+// }
+
+export const deleteApplication = (id) => dispatch => {
+    axios.delete(`https://6264452aa55d5055be47154f.mockapi.io/api/applicaitons/applications/${id}`)
+        .then(res => {
+            const deletedApp = res.data
+            dispatch({ type: types.DELETE_APPLICATION, payload: deletedApp })
+        }
+        )
+        .catch(err => console.error(err))
+}
+
 

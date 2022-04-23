@@ -3,6 +3,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link, useHistory } from 'react-router-dom';
 
+import { connect } from 'react-redux'
+import * as actions from '../../../redux/action-creators'
+
 import { FiEdit } from 'react-icons/fi';
 import { AiFillDelete } from 'react-icons/ai';
 import { CgInfo } from 'react-icons/cg';
@@ -12,14 +15,16 @@ import { CgInfo } from 'react-icons/cg';
 //? Import Icons using React Icons
 import { DiGithubAlt } from "react-icons/di";
 
-function ApplicationItems({ application, deleteApp}) {
+function ApplicationItems(props) {
+
+    const { applications, deleteApplication } = props;
     
     const history = useHistory();
 
 
     return (
         <StyledAppItems>
-            {application.map(app => {
+            {applications.map(app => {
                 let containerClass;
                 let status = app.currentStatus;
 
@@ -84,7 +89,7 @@ function ApplicationItems({ application, deleteApp}) {
                                     size = {'1.5em'}
                                 />
                                 <AiFillDelete
-                                    onClick = {() => deleteApp(app.id)}
+                                    onClick = {() => deleteApplication(app.id)}
                                     className = 'del-btn btn-icon'
                                     size = {'1.5em'}
                                 />
@@ -97,7 +102,15 @@ function ApplicationItems({ application, deleteApp}) {
     )
 }
 
-export default ApplicationItems
+const mapStateToProps = state => {
+    return {
+        deleteApplication: state.deleteApplication,
+        applications: state.applications,
+    }
+}
+
+
+export default connect(mapStateToProps, actions)(ApplicationItems)
 
 
 //!-- Styling -->
