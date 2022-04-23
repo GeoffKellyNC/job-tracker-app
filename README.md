@@ -19,6 +19,15 @@ App designed to track applied for jobs
 ## New Features and Bug Fixes (Change Log)
 
 
+------------------------------------------------------------
+### NEW FEATURES AND CHANGES 04/22/2022
+- [x] Switched app to use redux to manage state
+- [x] Added redux-thunk to allow async actions
+- [x] Added redux-logger to help with debugging
+
+
+
+
 
 
 ------------------------------------------------------------
@@ -29,7 +38,6 @@ App designed to track applied for jobs
 
 
 
-------------------------------------------------------------
 ------------------------------------------------------------
 ### NEW FEATURES AND CHANGES 04/02/2022
 - [x] Changed styling and layout for the details page for each application
