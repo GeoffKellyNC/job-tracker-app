@@ -3,6 +3,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link, useHistory } from 'react-router-dom';
 
+import { FiEdit } from 'react-icons/fi';
+import { AiFillDelete } from 'react-icons/ai';
+import { CgInfo } from 'react-icons/cg';
+
 // import './styles/ApplicationItems.css'
 
 //? Import Icons using React Icons
@@ -66,9 +70,21 @@ function ApplicationItems({ application, deleteApp}) {
                                 <p>{app.currentStatus}</p>
                             </h3>
                             <div className = 'btn-container'>
-                                <button className = 'info-btn' onClick = {() => {history.push(`/${app.id}`)}}>Info</button>
-                                <button className = 'del-btn' onClick = {() => deleteApp(app.id)} >Delete</button>
-                                <button className = 'edit-btn' onClick = {() => {history.push(`/edit/${app.id}`)}} >Edit</button>
+                                <CgInfo  
+                                    onClick = {() => {history.push(`/${app.id}`)}} 
+                                    className = 'info-btn btn-icon'
+                                    size = {'1.5em'}
+                                />
+                                <FiEdit 
+                                    onClick = {() => {history.push(`/edit/${app.id}`)}}
+                                    className = 'edit-btn btn-icon'
+                                    size = {'1.5em'}
+                                />
+                                <AiFillDelete
+                                    onClick = {() => deleteApp(app.id)}
+                                    className = 'del-btn btn-icon'
+                                    size = {'1.5em'}
+                                />
                             </div>
                         </div>
                     )
@@ -166,43 +182,33 @@ const StyledAppItems = styled.div`
         margin-bottom: 0.2em;
     }
 
-    .btn-container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 auto;
-        width: 100%;
-    }
 
-    .btn-container button {
-        background-color: ${pr => pr.theme.colors.yellow};
-        border: none;
-        border-radius: 5px;
-        color: ${pr => pr.theme.colors.black};
-        font-family: ${pr => pr.theme.font.mainFont};
-        font-size: 1em;
-        font-weight: 600;
-        padding: 0.5em;
-        width: 10em;
-        margin: 0.5em;
-        transition: 0.5s;
-    }
-
-    .info-btn{
-        background-color: ${pr => pr.theme.colors.yellow};
-    }
-
-
-
-    .info-btn:hover, .del-btn:hover, .edit-btn:hover{
-        background-color: ${pr => pr.theme.colors.red};
-        color: white;
-        transform: scale(1.1);
-    }
 
     .item-icon{
         font-size: 1.5em;
     }
+
+    .btn-container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 0.5em;
+    }
+
+    .btn-icon{
+        cursor: pointer;
+        color: ${pr => pr.theme.colors.white};
+        font-size: 1.5em;
+        transition: 0.5s;
+        &:hover{
+            color: ${pr => pr.theme.colors.burgundy};
+            transform: scale(1.1);
+        }
+    }
+
+
 
     
 

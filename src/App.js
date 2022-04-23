@@ -149,7 +149,7 @@ const StyledApp = styled.div`
   }
 
   header{
-      background-color: ${pr => pr.theme.colors.orange};
+      background-color: ${pr => pr.theme.colors.burgundy};
       box-shadow: 0px 0px 10px white;
   }
 
