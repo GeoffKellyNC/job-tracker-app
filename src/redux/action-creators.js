@@ -1,5 +1,5 @@
 import * as types from './action-types';
-import appData from '../data/dummyData';
+// import appData from '../data/dummyDatas';
 import axios from 'axios'
 
 
@@ -7,15 +7,6 @@ export const changeInput = ({name, value}) => {
     return{
         type: types.HANDLE_FORM_CHANGES,
         payload: { name, value },
-    }
-}
-
-export const handleSubmit = (newApplication) => {
-    console.log('Action Creator')
-
-    return{
-        type: types.HANDLE_FORM_SUBMIT,
-        payload: newApplication,
     }
 }
 
@@ -42,4 +33,12 @@ export const fetchApplicationData = () => dispatch =>{
         .catch(err => console.error(err))
 }
 
+export const handleSubmit = (newApplication) => dispatch => {
+    axios.post('https://6264452aa55d5055be47154f.mockapi.io/api/applicaitons/applications', newApplication)
+        .then(res => {
+            const newApp = res.data
+            dispatch({ type: types.HANDLE_FORM_SUBMIT, payload: newApp })
+        })
+        .catch(err => console.error(err))
+}
 
