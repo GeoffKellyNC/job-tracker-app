@@ -36,7 +36,7 @@ function App(props) {
   //! State
 
   const [appCount, setAppCount] = useState(applications.length);
-  const [totalApps, setTotalApps] = useState(applications.length);
+
   //! --End State -- //
 
   useEffect(() => {
@@ -76,7 +76,6 @@ function App(props) {
 
 
     setAppCount(appCount + 1);
-    setTotalApps(totalApps + 1);
     history.push('/');
   }
 
@@ -113,7 +112,7 @@ function App(props) {
           <CompanyData data = {applications} />
         </Route>
         <Route path = {"/stats"}>
-          <Stats applicationData = {applications} totalApps = {totalApps} />
+          <Stats applicationData = {applications} totalApps = {appCount} />
         </Route>
         <Route  path = "/form" >
           <AppForm  update = {updateValues} submit = {handelSubmit}/>
