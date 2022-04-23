@@ -1,5 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+
 import styled from 'styled-components'
+
+
 import { useHistory } from 'react-router-dom';
 
 import ApplicationItems from './ApplicationItems'
@@ -10,6 +13,8 @@ import ApplicationItemsList from './ApplicationItemsList'
 
 function Home({ application, appCount, deleteApp }) {
     const [wantList, setWantList] = useState(false);
+
+
 
 
     const history = useHistory();

@@ -3,7 +3,11 @@ import React from 'react'
 import { Link, useHistory } from 'react-router-dom';
 import styled from 'styled-components'
 
-// import './styles/ApplicationItemsList.css'
+import { FiEdit } from 'react-icons/fi';
+import { AiFillDelete } from 'react-icons/ai';
+import { CgInfo } from 'react-icons/cg';
+
+
 
 //? Import Icons using React Icons
 import { DiGithubAlt } from "react-icons/di";
@@ -65,11 +69,23 @@ function ApplicationItemsList({ application, deleteApp}) {
                         <h3>Status:
                             <p>{app.currentStatus}</p>
                         </h3>
-                        <div className = 'btn-container-listView'>
-                            <button className = 'info-btn' onClick = {() => {history.push(`/${app.id}`)}}>Info</button>
-                            <button className = 'del-btn' onClick = {() => deleteApp(app.id)} >Delete</button>
-                            <button className = 'edit-btn' onClick = {() => {history.push(`/edit/${app.id}`)}} >Edit</button>
-                        </div>
+                        <div className = 'btn-container'>
+                                <CgInfo  
+                                    onClick = {() => {history.push(`/${app.id}`)}} 
+                                    className = 'info-btn btn-icon'
+                                    size = {'1.5em'}
+                                />
+                                <FiEdit 
+                                    onClick = {() => {history.push(`/edit/${app.id}`)}}
+                                    className = 'edit-btn btn-icon'
+                                    size = {'1.5em'}
+                                />
+                                <AiFillDelete
+                                    onClick = {() => deleteApp(app.id)}
+                                    className = 'del-btn btn-icon'
+                                    size = {'1.5em'}
+                                />
+                            </div>
                     </div>
                     )
                 })

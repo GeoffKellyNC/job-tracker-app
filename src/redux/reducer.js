@@ -3,7 +3,6 @@ import * as types from './action-types';
 import applicationData from '../data/dummyData';
 
 
-
 function applications(appData = applicationData, action) {
     switch (action.type) {
         case types.GET_APPLICATION: {
