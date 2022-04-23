@@ -113,7 +113,7 @@ function App(props) {
           <AppForm  update = {updateValues} submit = {handelSubmit}/>
         </Route>
         <Route path = {`/:appID`}>
-          <AppDetails details = {applications} />
+          <AppDetails />
         </Route>
         <Route exact path = "/">
           <Home application = {applications} appCount = {appCount} deleteApp = {deleteApp} />
