@@ -32,7 +32,7 @@ export const handleSubmit = (newApplication) => dispatch => {
 }
 
 export const editForm = (editedApp) => dispatch => {
-    axios.put(`${process.env.REACT_APP_API_ENDPOINT}/${editedApp.id}`, editedApp)
+    axios.put(`https://${process.env.REACT_APP_API_ENDPOINT}.mockapi.io/api/applicaitons/applications/${editedApp.id}`, editedApp)
         .then(res => {
             const newApp = res.data
             dispatch({ type: types.EDIT_FORM, payload: newApp })
@@ -47,7 +47,7 @@ export const editForm = (editedApp) => dispatch => {
 
 
 export const deleteApplication = (id) => dispatch => {
-    axios.delete(`${process.env.REACT_APP_API_ENDPOINT}/${id}`)
+    axios.delete(`https://${process.env.REACT_APP_API_ENDPOINT}.mockapi.io/api/applicaitons/applications/${id}`)
         .then(res => {
             const deletedApp = res.data
             dispatch({ type: types.DELETE_APPLICATION, payload: deletedApp })
