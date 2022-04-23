@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import { Route, Switch, useHistory } from 'react-router-dom';
 import styled from 'styled-components';
+import { connect } from 'react-redux'
+import * as actions from './redux/action-creators'
 
 //! Components
 import Home from './components/sections/home/Home';
@@ -14,33 +16,25 @@ import CompanyData from './components/CompanyData';
 import About from './components/sections/about/About';
 
 //! -- Importing Data -- //
-import applicationData from './data/dummyData'
 
 //! Initial Form Values Object
-const initialFormValues = {
-  companyName: '',
-  companyPhone: '',
-  companyWeb: '',
-  jobTitle: '',
-  dateApplied: '',
-  jobDiscovery: '',
-  salaryInfo: '',
-  contactQues: '',
-  contactName: '',
-  contactPhone: '',
-  contactEmail: '',
-  contactPosition: '',
-  currentStatus: '',
-  otherNotes: '',
-}
 
-function App() {
+
+function App(props) {
+
+  const { 
+    applications, 
+    changeInput,
+    form,
+    handleSubmit,
+    deleteApplication,
+    editForm } = props
+
+
   //! State
 
-  const [formValues, setFormValues] = useState(initialFormValues);
-  const [application,setApplication] = useState(applicationData);
-  const [appCount, setAppCount] = useState(application.length);
-  const [totalApps, setTotalApps] = useState(application.length);
+  const [appCount, setAppCount] = useState(applications.length);
+  const [totalApps, setTotalApps] = useState(applications.length);
   //! --End State -- //
 
   //! History
@@ -50,57 +44,44 @@ function App() {
 
 //! Form Controllers
   const updateValues = (inputName, inputValue) => {
-    setFormValues({
-      ...formValues,
-      [inputName]: inputValue
-    })
+    changeInput({ name: inputName, value: inputValue })
   }
 
   const handelSubmit = (e) => {
     e.preventDefault();
     const newApplication = {
       id: uuid(),
-      companyName: formValues.companyName,
-      companyPhone: formValues.companyPhone,
-      companyWeb: formValues.companyWeb,
-      jobTitle: formValues.jobTitle,
-      dateApplied: formValues.dateApplied,
-      jobDiscovery: formValues.jobDiscovery,
-      salaryInfo: formValues.salaryInfo,
-      contactQues: formValues.contactQues,
-      contactName: formValues.contactName,
-      contactPhone: formValues.contactPhone,
-      contactEmail: formValues.contactEmail,
-      contactPosition: formValues.contactPosition,
-      currentStatus: formValues.currentStatus,
-      otherNotes: formValues.otherNotes,
+      companyName: form.companyName,
+      companyPhone: form.companyPhone,
+      companyWeb: form.companyWeb,
+      jobTitle: form.jobTitle,
+      dateApplied: form.dateApplied,
+      jobDiscovery: form.jobDiscovery,
+      salaryInfo: form.salaryInfo,
+      contactQues: form.contactQues,
+      contactName: form.contactName,
+      contactPhone: form.contactPhone,
+      contactEmail: form.contactEmail,
+      contactPosition: form.contactPosition,
+      currentStatus: form.currentStatus,
+      otherNotes: form.otherNotes,
     }
+    handleSubmit(newApplication);
 
-    
 
-
-    setApplication([...application, newApplication]);
-    setFormValues(initialFormValues);
     setAppCount(appCount + 1);
     setTotalApps(totalApps + 1);
     history.push('/');
   }
 
   const deleteApp = (id) => {
-    const newAppList = application.filter(app => app.id !== id);
-    setApplication(newAppList);
+    deleteApplication(id);
     setAppCount(appCount - 1);
   }
-    //*/: --Edit Form Function --//
 
     const updateEdit = (e, editApp) => {
       e.preventDefault();
-      setApplication(application.map(app => {
-        if (app.id === editApp.id){
-          return editApp
-        }
-        return app
-      }))
+      editForm(editApp);
       history.push('/')
     }
     //* --End Edit Form Function --//
@@ -117,32 +98,39 @@ function App() {
       </header>
       <Switch >
         <Route path = {`/edit/:appID`}>
-          <EditForm details = {application}  updateEdit = {updateEdit}  />
+          <EditForm details = {applications}  updateEdit = {updateEdit}  />
         </Route>
         <Route path = {"/about"}>
           <About />
         </Route>
         <Route path = {`/companyData`}>
-          <CompanyData data = {application} />
+          <CompanyData data = {applications} />
         </Route>
         <Route path = {"/stats"}>
-          <Stats applicationData = {application} totalApps = {totalApps} />
+          <Stats applicationData = {applications} totalApps = {totalApps} />
         </Route>
         <Route  path = "/form" >
-          <AppForm values = {formValues} update = {updateValues} submit = {handelSubmit}/>
+          <AppForm  update = {updateValues} submit = {handelSubmit}/>
         </Route>
         <Route path = {`/:appID`}>
-          <AppDetails details = {application} />
+          <AppDetails />
         </Route>
         <Route exact path = "/">
-          <Home application = {application} appCount = {appCount} deleteApp = {deleteApp} />
+          <Home application = {applications} appCount = {appCount} deleteApp = {deleteApp} />
         </Route>
       </Switch>
     </StyledApp>
   );
 }
 
-export default App;
+const mapStateToProps= state => {
+  return{
+    applications: state.applications,
+    form: state.form
+  }
+}
+
+export default connect(mapStateToProps, actions)(App)
 
 
 

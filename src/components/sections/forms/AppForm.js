@@ -4,11 +4,19 @@ import styled from 'styled-components'
 
 import { useHistory } from 'react-router-dom'
 
+import { connect } from 'react-redux'
+import * as actions from '../../../redux/action-creators'
 
 
 
 
-function AppForm({ values, update, submit }) {
+
+function AppForm(props) {
+
+    const { 
+        values, 
+        update, 
+        submit } = props
 
     const history = useHistory();
 
@@ -181,7 +189,19 @@ function AppForm({ values, update, submit }) {
   )
 }
 
-export default AppForm
+const mapStateToProps = (state) => {
+    return {
+        values: state.form
+    }
+}
+
+
+export default connect(mapStateToProps, actions)(AppForm)
+
+
+
+
+
 
 
 
