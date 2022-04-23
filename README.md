@@ -1,4 +1,5 @@
 ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/geoffkellync/job-tracker-app/react?color=06b724&label=React&logo=React) ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/geoffkellync/job-tracker-app/react-router-dom?color=red&logo=react-router&logoColor=orange) ![GitHub package.json version](https://img.shields.io/github/package-json/v/geoffkellync/job-tracker-app) ![GitHub issues](https://img.shields.io/github/issues/geoffkellync/job-tracker-app?logo=github) ![Website](https://img.shields.io/website?up_message=online&url=https%3A%2F%2Fgeoffkelly.dev) 
+![GitHub package.json version](https://img.shields.io/github/package-json/v/geoffkellync/job-tracker-app?color=red&label=alpha-version) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/geoffkellync/job-tracker-app?color=g&logo=github) ![GitHub deployments](https://img.shields.io/github/deployments/geoffkellync/job-tracker-app/production?label=Deployment%20State) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/geoffkellync/job-tracker-app) ![GitHub last commit](https://img.shields.io/github/last-commit/geoffkellync/job-tracker-app?logo=github)
 
 
 
@@ -6,6 +7,14 @@
 --------------------------------------------------------------
 # job-tracker-app
 App designed to track applied for jobs
+
+## Technology Used in This Project
+- [React](https://reactjs.org/)
+- [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
+- [Redux](https://redux.js.org/)
+- [Yup]
+- [Axios]
+- [redux-thunk]
 
 ##Features: 
 - [x] Create a job application
