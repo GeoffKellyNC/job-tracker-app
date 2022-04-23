@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import { useHistory } from 'react-router-dom'
 
+//redux
 import { connect } from 'react-redux'
 import * as actions from '../../../redux/action-creators'
 
@@ -13,6 +14,7 @@ import * as actions from '../../../redux/action-creators'
 
 function AppForm(props) {
 
+    //State from redux
     const { 
         values, 
         update, 

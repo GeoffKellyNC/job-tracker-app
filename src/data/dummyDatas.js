@@ -108,23 +108,7 @@ const applicationData =  [
         currentStatus: 'Interview Phase',
         otherNotes: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
     },
-    {
-        id: uuid(),
-        companyName: 'Google',
-        companyPhone: '123-456-7890',
-        companyWeb: 'www.google.com',
-        jobTitle: 'Software Engineer',
-        dateApplied: '2022-03-01',
-        jobDiscovery: 'Google',
-        salaryInfo: '$100,000',
-        contactQues: 'Yes',
-        contactName: 'John Doe',
-        contactPhone: '123-456-7890',
-        contactEmail: 'johndoe@email.com',
-        contactPosition: 'Manager',
-        currentStatus: 'other',
-        otherNotes: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
-    }
+
     
   ]
 

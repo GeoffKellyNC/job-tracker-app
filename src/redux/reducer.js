@@ -1,17 +1,15 @@
 import { combineReducers } from 'redux';
 import * as types from './action-types';
-import applicationData from '../data/dummyData';
 
 
-
-function applications(appData = applicationData, action) {
+const initialApps = []
+function applications(appData = initialApps, action) {
     switch (action.type) {
         case types.GET_APPLICATION: {
-
             return action.payload
         }
         case types.EDIT_FORM: {
-            const newApplications = applicationData.map(app => {
+            const newApplications = appData.map(app => {
                 if (app.id === action.payload.id) {
                     return action.payload
                 }
@@ -24,6 +22,9 @@ function applications(appData = applicationData, action) {
             const id = action.payload
             console.log(`Deleting ${id}`)
             return appData.filter(app => app.id !== id)
+        }
+        case types.HANDLE_FORM_SUBMIT: {
+            return  [...appData, action.payload]
         }
         default: 
             return appData
@@ -53,10 +54,7 @@ function form(formState = initialForm,action){
             const { name, value } = action.payload
             return { ...formState, [name]: value}
         }
-        case types.HANDLE_FORM_SUBMIT: {
-            const  newApplication  = action.payload
-            return  applicationData.push(newApplication)
-        }
+
         default: 
             return formState
     }

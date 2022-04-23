@@ -3,14 +3,15 @@ export default {
     colors: {
         red: '#FFADAD', // 255, 173, 173 --> 
         lightBlue: '#8AF3FF',
-        black: '#353531',
+        black: '#2f2a2a',
         darkBlue: '#218380',
         white: '#FFFFFC',
         purple: '#57ff81fc',
         offWhite: '#f4faff',
         grey: '#ede6e9',
         yellow: '#FDFFB6',
-        orange: '#FFD6A5'
+        orange: '#FFD6A5',
+        burgundy: '#f73c3c'
     },
     background: '#CFDBD5',
     breakPoints: {
@@ -28,11 +29,11 @@ export default {
         whiteBoxShadow: '0px 0px 15px #fff'
     },
     appStatus: {
-        applied: '#A0C4FF', 
-        rejected: '#FFADAD', // Light Red
-        offer: '#CAFFBF', // Light Green
-        interview: '#9BF6FF',
-        contacted: '#FFC6FF',
-        other: '#FFD6A5'
+        applied: '#5897ff', 
+        rejected: '#ff6767', // Light Red
+        offer: '#9bf044', // Light Green
+        interview: '#4eefff',
+        contacted: '#ff6cff',
+        other: '#ffa456'
     }
 }

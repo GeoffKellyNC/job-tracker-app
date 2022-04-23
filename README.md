@@ -29,13 +29,19 @@ App designed to track applied for jobs
 
 
 ------------------------------------------------------------
+### NEW FEATURES AND CHANGES 04/23/2022
+- [x] Changed out buttons on Application Card on homepage to be Icons
+- [x] Added data to a mock API database and migrated Application data there
+- [x] Added ability to add app thru api call and persist through refresh
+
+
+
+
+------------------------------------------------------------
 ### NEW FEATURES AND CHANGES 04/22/2022
 - [x] Switched app to use redux to manage state
 - [x] Added redux-thunk to allow async actions
 - [x] Added redux-logger to help with debugging
-
-
-
 
 
 

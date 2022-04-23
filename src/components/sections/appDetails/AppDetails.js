@@ -1,10 +1,13 @@
 import React from 'react'
+
 import styled from 'styled-components'
-import { Link, useParams, useHistory } from 'react-router-dom'
+
+import { useParams, useHistory } from 'react-router-dom'
+
+//Redux
 import { connect } from 'react-redux'
 import * as actions from '../../../redux/action-creators'
 
-// import './styles/AppDetails.css'
 
 
 
@@ -13,14 +16,14 @@ function AppDetails(props) {
 
     const { applications } = props
 
-const history = useHistory();
+    const history = useHistory();
 
 
-const { appID } = useParams();
+    const { appID } = useParams();
 
 
-//!-- Getting the app details from the API --//
-const item = applications.find(app => app.id === appID);
+    //-- Getting the app details from the API --//
+    const item = applications.find(app => app.id === appID);
 
 
     return (
@@ -65,7 +68,7 @@ const mapStateToProps = state => ({
 export default connect(mapStateToProps, actions)(AppDetails)
 
 
-//!-- Styling --//
+//-- Styling --//
 const StyledAppDetails = styled.div`
     display: flex;
     flex-direction: column;

@@ -1,15 +1,19 @@
 import React, { useState } from 'react'
+
 import styled from 'styled-components'
+
+
 import { useHistory } from 'react-router-dom';
 
 import ApplicationItems from './ApplicationItems'
 import ApplicationItemsList from './ApplicationItemsList'
 
 
-// import './styles/home.css'
 
 function Home({ application, appCount, deleteApp }) {
     const [wantList, setWantList] = useState(false);
+
+
 
 
     const history = useHistory();
@@ -52,6 +56,9 @@ export default Home
 
 //!-- Styling --//
 const StyledHome = styled.div`
+    background-color: ${pr => pr.theme.colors.black};
+
+
     .top-text {
         display: flex;
         justify-content: space-between;
@@ -65,45 +72,51 @@ const StyledHome = styled.div`
         align-items: center;
     }
     .add-app-btn {
-        background-color: #f5f5f5;
+        background-color: ${pr => pr.theme.colors.burgundy};
         border-radius: 10px;
         border: none;
         padding: 10px;
         font-size: 1rem;
         margin-right: 10px;
         margin-left: 10px;
-        color: #353531;
+        color: ${pr => pr.theme.colors.white};
         font-family: ${pr => pr.theme.font.mainFont};
+        transition: all 0.5s ease-in-out;
+
         &:hover {
-            background-color: #e5e5e5;
+            transform: scale(1.2);
         }
     }
     .stats-btn {
-        background-color: #f5f5f5;
+        background-color: ${pr => pr.theme.colors.burgundy};
         border-radius: 10px;
         border: none;
         padding: 10px;
         font-size: 1rem;
         margin-right: 10px;
         margin-left: 10px;
-        color: #353531;
+        color: ${pr => pr.theme.colors.white};
         font-family: ${pr => pr.theme.font.mainFont};
+        transition: all 0.5s ease-in-out;
         &:hover {
-            background-color: #e5e5e5;
+            transform: scale(1.2);
+
         }
     }
     .list-btn {
-        background-color: #f5f5f5;
+        background-color: ${pr => pr.theme.colors.burgundy};
         border-radius: 10px;
         border: none;
         padding: 10px;
         font-size: 1rem;
         margin-right: 10px;
         margin-left: 10px;
-        color: #353531;
+        color: ${pr => pr.theme.colors.white};
         font-family: ${pr => pr.theme.font.mainFont};
+        transition: all 0.5s ease-in-out;
         &:hover {
-            background-color: #e5e5e5;
+            transform: scale(1.2);
+
         }
     }
     .app-items-container {
