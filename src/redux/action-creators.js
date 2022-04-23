@@ -14,7 +14,7 @@ export const changeInput = ({name, value}) => {
 
 
 export const fetchApplicationData = () => dispatch =>{
-    axios.get(process.env.REACT_APP_API_ENDPOINT)
+    axios.get(`https://${process.env.REACT_APP_API_ENDPOINT}.mockapi.io/api/applicaitons/applications`)
         .then(res => {
             const allData = res.data
             dispatch({ type: types.GET_APPLICATION, payload: allData })
