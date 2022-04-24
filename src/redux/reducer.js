@@ -60,18 +60,8 @@ function form(formState = initialForm,action){
     }
 }
 
-function stats(statsState = {}, action) {
-    switch (action.type) {
-        case types.GET_STATS: {
-            return action.payload
-        }
-        default:
-            return statsState
-    }
-}
 
 export default combineReducers({
     applications,
     form,
-    stats
 })

@@ -63,9 +63,9 @@ describe("Application Form", () => {
         currentStatusSelect().should("exist")
         otherNotesTextarea().should("exist")
         submitButton().should("exist")
-        backButton().should("exist")
+        backButton().should("exist") 
 
-        cy.contains(/job tracker/i).should('exist')
+        cy.contains(/application tracker/i).should('exist')
     })
 
     it("Form is working", () => {

@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux'
 import * as actions from './redux/action-creators'
 
-//! Components
+// Components
 import Home from './components/sections/home/Home';
 import AppForm from './components/sections/forms/AppForm';
 import AppDetails from './components/sections/appDetails/AppDetails';
@@ -15,9 +15,8 @@ import Stats from './components/sections/stats/Stats';
 import CompanyData from './components/CompanyData';
 import About from './components/sections/about/About';
 
-//! -- Importing Data -- //
 
-//! Initial Form Values Object
+// Initial Form Values Object
 
 
 function App(props) {
@@ -35,14 +34,14 @@ function App(props) {
 
 
 
-  //! State
+  // State
 
   const [appCount, setAppCount] = useState(applications.length);
   const [isLoaded, setIsLoaded] = useState(false);
       console.log(`Application .length ${applications.length}`)
       console.log(`App Count ${appCount}`)
 
-  //! --End State -- //
+  // --End State -- //
 
   useEffect(() => {
     fetchApplicationData()
@@ -56,12 +55,14 @@ function App(props) {
   }, [applications])
   
 
-  //! History
+  // History
   const history = useHistory();
 
-  //! --End History -- //
+  // --End History -- //
 
-//! Form Controllers
+  
+
+// Form Controllers
   const updateValues = (inputName, inputValue) => {
     changeInput({ name: inputName, value: inputValue })
   }
@@ -108,9 +109,9 @@ function App(props) {
 
 
   
-//! --End Form Controllers -- //
+// --End Form Controllers -- //
 
-//! --Component Functions -- //
+// --Component Functions -- //
   return (
     <StyledApp className="App">
       <header>

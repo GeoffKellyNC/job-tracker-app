@@ -36,8 +36,7 @@ export const editForm = (editedApp) => dispatch => {
         .then(res => {
             const newApp = res.data
             dispatch({ type: types.EDIT_FORM, payload: newApp })
-        }
-        )
+        })
         .catch(err => console.error(err))
     return{
         type: types.EDIT_FORM,
