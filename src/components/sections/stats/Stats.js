@@ -24,12 +24,27 @@ const Stats = ({ applicationData, totalApps }) => {
 
 //! -- Effects-- //
 
+    console.log(applicationData)
+    
+
 
     useEffect(() => {
         const companyNames = data.map(app => app.companyName);
         const uniqueCompanies = [...new Set(companyNames)];
         setCompanies(uniqueCompanies);
+        getNumInterviews();
     },[data]);
+
+    const getNumInterviews = () => {
+        let num = 0;
+        data.forEach(app => {
+            if (app.currentStatus === 'Interview Phase') {
+                num++;
+            }
+        });
+        setInterviews(num);
+    }
+
 
 
  

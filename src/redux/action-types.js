@@ -5,3 +5,8 @@ export const HANDLE_FORM_CHANGES = 'HANDLE_FORM_CHANGES';
 export const HANDLE_FORM_SUBMIT = 'HANDLE_FORM_SUBMIT';
 export const DELETE_APPLICATION = 'DELETE_APPLICATION';
 export const EDIT_FORM = 'EDIT_FORM';
+
+
+//Stats 
+
+export const GET_STATS = 'GET_STATS';

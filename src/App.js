@@ -29,19 +29,32 @@ function App(props) {
     handleSubmit,
     deleteApplication,
     editForm,
-    fetchApplicationData } = props
+    fetchApplicationData,
+    fetchStats,
+    stats } = props
 
 
 
   //! State
 
   const [appCount, setAppCount] = useState(applications.length);
+  const [isLoaded, setIsLoaded] = useState(false);
+      console.log(`Application .length ${applications.length}`)
+      console.log(`App Count ${appCount}`)
 
   //! --End State -- //
 
   useEffect(() => {
     fetchApplicationData()
+    fetchStats()
+
   }, [])
+
+  useEffect(() => {
+    setAppCount(applications.length)
+    setIsLoaded(true)
+  }, [applications])
+  
 
   //! History
   const history = useHistory();
@@ -82,6 +95,8 @@ function App(props) {
   const deleteApp = (id) => {
     deleteApplication(id);
     setAppCount(appCount - 1);
+    history.push('/');
+    
   }
 
     const updateEdit = (e, editApp) => {
@@ -99,9 +114,10 @@ function App(props) {
   return (
     <StyledApp className="App">
       <header>
-        <h1> Job Tracker </h1>
+        <h1> Application Tracker (0.0.1a) </h1>
       </header>
-      <Switch >
+      {isLoaded ? 
+        <Switch >
         <Route path = {`/edit/:appID`}>
           <EditForm details = {applications}  updateEdit = {updateEdit}  />
         </Route>
@@ -123,7 +139,8 @@ function App(props) {
         <Route exact path = "/">
           <Home application = {applications} appCount = {appCount} deleteApp = {deleteApp} />
         </Route>
-      </Switch>
+      </Switch> : <h1 className = 'loading-text'>Getting Data...</h1>}
+      
     </StyledApp>
   );
 }
@@ -131,7 +148,8 @@ function App(props) {
 const mapStateToProps= state => {
   return{
     applications: state.applications,
-    form: state.form
+    form: state.form,
+    stats: state.stats
   }
 }
 
@@ -142,6 +160,14 @@ export default connect(mapStateToProps, actions)(App)
 const StyledApp = styled.div`
     body{
       background-color: #F7F0F0;
+  }
+
+  .loading-text{
+    font-size: 2rem;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    margin-top: 50px;
   }
 
   h1{

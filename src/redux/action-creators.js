@@ -23,7 +23,7 @@ export const fetchApplicationData = () => dispatch =>{
 }
 
 export const handleSubmit = (newApplication) => dispatch => {
-    axios.post(process.env.REACT_APP_API_ENDPOINT, newApplication)
+    axios.post(`https://${process.env.REACT_APP_API_ENDPOINT}.mockapi.io/api/applicaitons/applications`, newApplication)
         .then(res => {
             const newApp = res.data
             dispatch({ type: types.HANDLE_FORM_SUBMIT, payload: newApp })
@@ -54,6 +54,15 @@ export const deleteApplication = (id) => dispatch => {
         }
         )
         .catch(err => console.error(err))
+}
+
+
+export const fetchStats = () => dispatch => {
+    axios.get(`https://${process.env.REACT_APP_API_ENDPOINT}.mockapi.io/api/applicaitons/stats`)
+        .then(res => {
+            const statsData = res.data
+            dispatch({type: types.GET_STATS, payload: statsData})
+        })
 }
 
 
