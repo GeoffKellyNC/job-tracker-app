@@ -7,6 +7,10 @@ export const DELETE_APPLICATION = 'DELETE_APPLICATION';
 export const EDIT_FORM = 'EDIT_FORM';
 
 
+export const HANDLE_SEARCH_CHANGES = 'HANDLE_SEARCH_CHANGES';
+export const GET_JOB_DATABASE = 'GET_JOB_DATABASE';
+
+
 //Stats 
 
 export const GET_STATS = 'GET_STATS';

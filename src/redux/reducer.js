@@ -60,8 +60,44 @@ function form(formState = initialForm,action){
     }
 }
 
+const initialSearchForm = {
+    search: '',
+}
+
+function jobSearchForm(searchFormState = initialSearchForm ,action){
+    switch(action.type)
+    {
+        case types.HANDLE_SEARCH_CHANGES: {
+            const { name, value } = action.payload
+            return { ...searchFormState, [name]: value}
+        }
+        case types.GET_JOB_DATABASE: {
+            return initialSearchForm
+        }
+        default:
+            return searchFormState
+    }
+}
+
+function returnedJobs(returnedJobsState = [], action){
+    switch(action.type){
+        case types.GET_JOB_DATABASE: {
+            return action.payload
+        }
+        default:
+            return returnedJobsState
+    }
+}
+
+
+
+
+
 
 export default combineReducers({
     applications,
     form,
+    jobSearchForm,
+    returnedJobs,
+    
 })

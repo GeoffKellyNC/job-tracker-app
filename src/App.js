@@ -14,6 +14,7 @@ import EditForm  from './components/sections/forms/EditForm';
 import Stats from './components/sections/stats/Stats';
 import CompanyData from './components/CompanyData';
 import About from './components/sections/about/About';
+import Jobs from './components/sections/jobs/Jobs'
 
 
 // Initial Form Values Object
@@ -28,9 +29,8 @@ function App(props) {
     handleSubmit,
     deleteApplication,
     editForm,
-    fetchApplicationData,
-    fetchStats,
-    stats } = props
+    fetchApplicationData
+   } = props
 
 
 
@@ -38,14 +38,11 @@ function App(props) {
 
   const [appCount, setAppCount] = useState(applications.length);
   const [isLoaded, setIsLoaded] = useState(false);
-      console.log(`Application .length ${applications.length}`)
-      console.log(`App Count ${appCount}`)
 
   // --End State -- //
 
   useEffect(() => {
     fetchApplicationData()
-    fetchStats()
 
   }, [])
 
@@ -60,7 +57,7 @@ function App(props) {
 
   // --End History -- //
 
-  
+
 
 // Form Controllers
   const updateValues = (inputName, inputValue) => {
@@ -119,6 +116,9 @@ function App(props) {
       </header>
       {isLoaded ? 
         <Switch >
+        <Route path = "/jobs">
+          <Jobs />
+        </Route>
         <Route path = {`/edit/:appID`}>
           <EditForm details = {applications}  updateEdit = {updateEdit}  />
         </Route>

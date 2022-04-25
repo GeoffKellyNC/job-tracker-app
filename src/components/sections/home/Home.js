@@ -10,6 +10,7 @@ import ApplicationItemsList from './ApplicationItemsList'
 
 
 
+
 function Home({ application, appCount, deleteApp }) {
     const [wantList, setWantList] = useState(false);
 
