@@ -59,7 +59,7 @@ function App(props) {
 
 
 
-// Form Controllers
+// Application Form Controllers
   const updateValues = (inputName, inputValue) => {
     changeInput({ name: inputName, value: inputValue })
   }

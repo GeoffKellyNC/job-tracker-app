@@ -1,5 +1,4 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
 import { connect } from 'react-redux'
 import * as actions from '../../../../redux/action-creators'
 
@@ -7,12 +6,10 @@ function SearchForm(props) {
 
     const {
         values,
-        applications,
         handleSearchChange,
         fetchJobDatabase
     } = props
 
-    const history = useHistory()
 
 
     const onChange = (e) => {
@@ -25,7 +22,6 @@ function SearchForm(props) {
     const onSubmit = (e) => {
         e.preventDefault();
         fetchJobDatabase(values.search)
-        history.push('/jobs')
     }
 
 

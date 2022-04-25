@@ -4,6 +4,7 @@ import * as actions from '../../../redux/action-creators'
 import styled from 'styled-components'
 
 import Job from './components/Job'
+import SearchForm from './components/SearchForm'
 
 function Jobs(props) {
 
@@ -12,6 +13,7 @@ function Jobs(props) {
 
     return (
         <StyledJobs>
+        <SearchForm />
             {
                     jobData.map(job => {
                     return(

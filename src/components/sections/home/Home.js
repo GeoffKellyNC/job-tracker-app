@@ -41,6 +41,9 @@ function Home({ application, appCount, deleteApp }) {
                     {
                         !wantList ? <button className = 'list-btn'  onClick = {() => setWantList(!wantList)}>List View </button> : <button className = 'list-btn'  onClick = {() => setWantList(!wantList)}>Grid View </button>
                     }
+                    <button class-name = 'job-search-btn'
+                        onClick = {() => {history.push("/jobs")}}>Job Search
+                    </button>
                 </div>
             </div>
             <div className = 'app-items-container'>

@@ -52,4 +52,26 @@ export const deleteApplication = (id) => dispatch => {
 }
 
 
+export const fetchJobDatabase = (searchTerm,city,state) => dispatch => {
+
+    const options = {
+        method: 'POST',
+        url: 'https://indeed11.p.rapidapi.com/',
+        headers: {
+          'content-type': 'application/json',
+          'X-RapidAPI-Host': 'indeed11.p.rapidapi.com',
+          'X-RapidAPI-Key': 'd111348fcamsh04dc037ab98320dp1f5fd6jsnb81ca9f78a0e'
+        },
+        data: '{"search_terms":"crypto","location":"Atlanta, GA","page":"1","fetch_full_text":"yes"}'
+      };
+      
+     axios.request(options)
+        .then(res => {
+            console.log(res)
+        })
+        .catch(err => console.error(err))
+}
+
+
+
 
