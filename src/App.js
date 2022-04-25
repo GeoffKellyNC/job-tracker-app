@@ -191,7 +191,7 @@ const StyledApp = styled.div`
       margin: 0;
       padding: 1em;
       font-size: 2em;
-  }
+  } 
 
 
 
