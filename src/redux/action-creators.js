@@ -1,6 +1,8 @@
 import * as types from './action-types';
 import axios from 'axios'
 
+const link = process.env.REACT_APP_APPLICATION_LINK;
+
 
 export const changeInput = ({name, value}) => {
     return{
@@ -10,7 +12,7 @@ export const changeInput = ({name, value}) => {
 }
 
 export const fetchApplicationData = () => dispatch =>{
-    axios.get(`https://6264452aa55d5055be47154f.mockapi.io/api/applicaitons/applications`)
+    axios.get(`${link}`)
         .then(res => {
             const allData = res.data
             dispatch({ type: types.GET_APPLICATION, payload: allData })
@@ -19,7 +21,7 @@ export const fetchApplicationData = () => dispatch =>{
 }
 
 export const handleSubmit = (newApplication) => dispatch => {
-    axios.post(`https://6264452aa55d5055be47154f.mockapi.io/api/applicaitons/applications`, newApplication)
+    axios.post(`${link}`, newApplication)
         .then(res => {
             const newApp = res.data
             dispatch({ type: types.HANDLE_FORM_SUBMIT, payload: newApp })
@@ -28,7 +30,7 @@ export const handleSubmit = (newApplication) => dispatch => {
 }
 
 export const editForm = (editedApp) => dispatch => {
-    axios.put(`https://6264452aa55d5055be47154f.mockapi.io/api/applicaitons/applications/${editedApp.id}`, editedApp)
+    axios.put(`${link}/${editedApp.id}`, editedApp)
         .then(res => {
             const newApp = res.data
             dispatch({ type: types.EDIT_FORM, payload: newApp })
@@ -42,7 +44,7 @@ export const editForm = (editedApp) => dispatch => {
 
 
 export const deleteApplication = (id) => dispatch => {
-    axios.delete(`https://6264452aa55d5055be47154f.mockapi.io/api/applicaitons/applications/${id}`)
+    axios.delete(`${link}/${id}`)
         .then(res => {
             const deletedApp = res.data
             dispatch({ type: types.DELETE_APPLICATION, payload: deletedApp })
