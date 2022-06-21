@@ -53,7 +53,7 @@ export const deleteApplication = (id) => dispatch => {
         .catch(err => console.error(err))
 }
 
-
+ 
 export const fetchJobDatabase = (searchTerm,city,state) => dispatch => {
 
     const options = {
